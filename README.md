@@ -42,6 +42,7 @@ login page (they are listed there, one click each).
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run lint` | ESLint |
 | `npm run seed:snapshot` | Regenerate the offline fallback snapshot from Supabase |
+| `node scripts/build-parcel-geometry.mjs` | Rebuild the farm boundary and zones from OpenStreetMap |
 
 `predev` and `prebuild` copy MapLibre's web worker into `public/maplibre/` — see
 `scripts/copy-maplibre-worker.mjs` for why that is necessary.
@@ -91,11 +92,23 @@ no in-session toggle.
 
 ## How the data is shaped
 
-One farm, a real 25.2 ha smallholding at Brakwater about 20 km north of
-Windhoek. The boundary polygon is an illustrative rectangle sized to the listed
-hectares, not surveyed parcel lines. It is split into four management zones
-(cropland, two grazing camps, a degraded riverbed strip) so the map overlays
-have something to vary across.
+One farm, a real 21.58 ha smallholding at Brakwater about 20 km north of
+Windhoek. The boundary is genuine survey geometry — [OpenStreetMap way
+701878889](https://www.openstreetmap.org/way/701878889), tagged
+`landuse=farmland` — 31 vertices including the notch where a homestead is cut
+out of the northern edge. It reads as a real parcel on the satellite basemap in
+a way the drawn rectangle it replaced did not.
+
+The four management zones (cropland, two grazing camps, a degraded riverbed
+strip) are a derived subdivision, not survey data: a Voronoi partition of the
+boundary, so fence lines meet at natural angles and follow the outline instead
+of forming a grid. Zone areas use the same spherical formula as the parcel and
+sum to it exactly.
+
+`node scripts/build-parcel-geometry.mjs [osmWayId]` regenerates the whole thing
+from Overpass and prints a migration — use it to swap in a different parcel.
+Its output is byte-identical to
+`supabase/migrations/20260917214500_real_parcel_geometry.sql`.
 
 Twelve months of readings are seeded with Khomas Region seasonality — wet
 November to April, dry May to October — and rainfall normalised to the regional

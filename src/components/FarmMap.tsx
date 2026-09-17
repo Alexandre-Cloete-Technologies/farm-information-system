@@ -125,6 +125,18 @@ export function FarmMap({
     };
   }, [snapshot, activeLayer]);
 
+  // Frame the parcel rather than guessing a zoom: a real surveyed boundary can
+  // be any shape, and this one is nearly twice as tall as it is wide.
+  const bounds = useMemo(() => {
+    const ring = snapshot.farm.boundary_geojson.coordinates[0];
+    const lons = ring.map((c) => c[0]);
+    const lats = ring.map((c) => c[1]);
+    return [
+      [Math.min(...lons), Math.min(...lats)],
+      [Math.max(...lons), Math.max(...lats)],
+    ] as [[number, number], [number, number]];
+  }, [snapshot.farm.boundary_geojson]);
+
   const boundaryCollection = useMemo(
     () => ({
       type: "FeatureCollection" as const,
@@ -155,11 +167,7 @@ export function FarmMap({
   return (
     <div className="relative overflow-hidden rounded-md border border-border" style={{ height }}>
       <Map
-        initialViewState={{
-          longitude: snapshot.farm.centroid_lon,
-          latitude: snapshot.farm.centroid_lat,
-          zoom: 14.6,
-        }}
+        initialViewState={{ bounds, fitBoundsOptions: { padding: 28 } }}
         mapStyle={SATELLITE_STYLE}
         interactiveLayerIds={["zone-fill"]}
         onMouseMove={onHover}
