@@ -36,7 +36,7 @@ login page (they are listed there, one click each).
 
 | Script | What it does |
 |---|---|
-| `npm run dev` | Dev server |
+| `npm run dev` | Dev server (Turbopack) |
 | `npm run build` / `npm start` | Production build and serve |
 | `npm test` | Unit tests (risk formula, PDF generation) |
 | `npm run typecheck` | `tsc --noEmit` |
@@ -45,6 +45,13 @@ login page (they are listed there, one click each).
 
 `predev` and `prebuild` copy MapLibre's web worker into `public/maplibre/` — see
 `scripts/copy-maplibre-worker.mjs` for why that is necessary.
+
+**`build` pins Webpack on purpose.** Next 16 builds with Turbopack by default,
+but `@netlify/plugin-nextjs` (5.16.0, the current release) cannot bundle a
+Turbopack-built middleware into a Netlify edge function — it fails on chunk
+names like `[turbopack]_runtime.js`. Dropping `--webpack` will break the deploy,
+not the local build, so it looks harmless. Revisit once the plugin supports
+Turbopack.
 
 ## Demo accounts
 
