@@ -46,6 +46,15 @@ login page (they are listed there, one click each).
 `predev` and `prebuild` copy MapLibre's web worker into `public/maplibre/` — see
 `scripts/copy-maplibre-worker.mjs` for why that is necessary.
 
+**`@rolldown/binding-win32-x64-msvc` must stay in `optionalDependencies`.**
+Vitest 5 pulls its native binding through npm's optional-dependency mechanism,
+which [npm/cli#4828](https://github.com/npm/cli/issues/4828) sometimes skips on
+Windows — hence the explicit entry. As a regular `devDependency` it is a
+Windows-only binary that Linux cannot satisfy, and Netlify's build dies at
+`npm install` with `EBADPLATFORM` before it compiles anything. Listed as
+optional, npm installs it on Windows and skips it elsewhere. Check any change
+here with `npm install --dry-run --os=linux --cpu=x64`.
+
 **`build` pins Webpack on purpose.** Next 16 builds with Turbopack by default,
 but `@netlify/plugin-nextjs` (5.16.0, the current release) cannot bundle a
 Turbopack-built middleware into a Netlify edge function — it fails on chunk
