@@ -55,6 +55,18 @@ Windows-only binary that Linux cannot satisfy, and Netlify's build dies at
 optional, npm installs it on Windows and skips it elsewhere. Check any change
 here with `npm install --dry-run --os=linux --cpu=x64`.
 
+**The report route needs `outputFileTracingIncludes`.** react-pdf loads parts
+of its dependency tree by path at runtime, and Next's file tracing misses two
+of them: `yoga-layout`'s entry point, and pdfkit's `.cjs` standard-font metrics
+(it traces only the `.mjs` variants). Both are invisible locally and only bite
+in the deployed function, where the missing module takes the whole thing down
+and Netlify returns a bare 502. `next.config.ts` forces both in. If you add
+fonts or swap the PDF library, re-check that the deployed route still returns a
+PDF — a green build proves nothing here.
+
+To debug that class of failure, set `FIS_DEBUG_ERRORS=1` on the deploy and the
+route returns the underlying error in its 500 body.
+
 **`build` pins Webpack on purpose.** Next 16 builds with Turbopack by default,
 but `@netlify/plugin-nextjs` (5.16.0, the current release) cannot bundle a
 Turbopack-built middleware into a Netlify edge function — it fails on chunk

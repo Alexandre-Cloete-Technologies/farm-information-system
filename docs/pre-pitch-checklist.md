@@ -33,8 +33,10 @@ Sign in, load the dashboard, and check the screen is complete before moving on.
 
 ## The report
 
-- [ ] Click **Generate report** on the Bank view. A PDF downloads within a few
-      seconds.
+- [ ] Click **Generate report** on the Bank view **on the deployed site**, not
+      just locally. This route depends on files that Next's tracing can drop
+      from the serverless bundle, so it can work perfectly on your machine and
+      still 502 in production. A PDF should download within a few seconds.
 - [ ] Open it. One page, nothing cut off, and the value and risk figures match
       what is on screen.
 - [ ] Click it a second time — repeat generation should behave identically.
