@@ -1,7 +1,6 @@
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { hasSessionCookie, isAuthUnreachable } from "@/lib/supabase/offline";
-import { valuationReportDocument } from "@/lib/report/ValuationReport";
 import { getFarmSnapshot } from "@/lib/data/getFarmSnapshot";
 import { createClient } from "@/lib/supabase/server";
 
@@ -29,13 +28,16 @@ export async function GET() {
   }
 
   try {
-    // Imported here rather than at module scope on purpose. react-pdf pulls in
-    // a deep native/WASM dependency tree, and if any of it fails to resolve in
-    // the deployed bundle a top-level import takes the whole function down at
-    // init — the client sees a bare 502 that this handler never gets to catch.
-    // Inside the try, the same failure becomes the retryable error the Bank
-    // view already knows how to show.
-    const { renderToBuffer } = await import("@react-pdf/renderer");
+    // Both imports are deferred to here on purpose. react-pdf pulls in a deep
+    // native/WASM dependency tree, and if any of it fails to resolve in the
+    // deployed bundle a top-level import takes the whole function down at init
+    // — the client gets a bare 502 that this handler never runs to catch.
+    // ValuationReport counts too: it imports react-pdf itself, so importing it
+    // statically would drag the same tree in through the back door.
+    const [{ renderToBuffer }, { valuationReportDocument }] = await Promise.all([
+      import("@react-pdf/renderer"),
+      import("@/lib/report/ValuationReport"),
+    ]);
 
     const snapshot = await getFarmSnapshot();
     const buffer = await renderToBuffer(valuationReportDocument(snapshot));
@@ -49,6 +51,19 @@ export async function GET() {
     });
   } catch (error) {
     console.error("[api/report] render failed", error);
-    return NextResponse.json({ error: "Could not generate the report" }, { status: 500 });
+
+    // Netlify's function logs need a paid plan / matching account, so set
+    // FIS_DEBUG_ERRORS=1 on the deploy to read the cause from the response
+    // instead. Off by default: a product that gets resold shouldn't leak
+    // internals to whoever clicks the button.
+    const detail =
+      process.env.FIS_DEBUG_ERRORS === "1"
+        ? { detail: error instanceof Error ? `${error.name}: ${error.message}` : String(error) }
+        : {};
+
+    return NextResponse.json(
+      { error: "Could not generate the report", ...detail },
+      { status: 500 },
+    );
   }
 }
