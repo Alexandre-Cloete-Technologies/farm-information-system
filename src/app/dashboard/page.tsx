@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { DashboardHeader, VendorStrip } from "@/components/DashboardHeader";
+import { SessionKeeper } from "@/components/SessionKeeper";
 import { AgronomistView } from "@/components/views/AgronomistView";
 import { BankView } from "@/components/views/BankView";
 import { FarmerView } from "@/components/views/FarmerView";
@@ -54,6 +55,7 @@ export default async function DashboardPage() {
 
   return (
     <>
+      <SessionKeeper />
       <DashboardHeader profile={profile} snapshot={snapshot} />
       <VendorStrip snapshot={snapshot} />
       <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-4">

@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Vendored MapLibre worker bundle, copied in by scripts/copy-maplibre-worker.mjs.
     "public/maplibre/**",
+    // Netlify CLI build output and local link state.
+    ".netlify/**",
   ]),
 ]);
 

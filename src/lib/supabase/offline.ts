@@ -6,9 +6,10 @@ import type { UserRole } from "@/lib/data/types";
  * `getFarmSnapshot()` falls back to a bundled snapshot when Supabase can't be
  * reached, but auth sits in front of it: if `auth.getUser()` fails because the
  * network is down, the presenter gets bounced to a login page that also can't
- * reach Supabase, and the snapshot is never used. These helpers let the proxy
- * and the dashboard tell "this person is not signed in" apart from "we can't
- * currently check", and keep serving the cached demo in the second case.
+ * reach Supabase, and the snapshot is never used. These helpers let the
+ * dashboard and the report route tell "this person is not signed in" apart from
+ * "we can't currently check", and keep serving the cached demo in the second
+ * case.
  */
 
 /** Cookie the login page writes so a degraded render knows which view to show. */

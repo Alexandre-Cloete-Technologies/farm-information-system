@@ -110,12 +110,20 @@ after changing the seed data.
 Auth sits in front of that, so it gets the same treatment
 (`src/lib/supabase/offline.ts`). If `auth.getUser()` fails because Supabase is
 unreachable — as opposed to the token being rejected — and the browser is
-carrying a session, the proxy and the dashboard let the request through and
-serve the cached demo instead of redirecting to a login page that also can't
-reach Supabase. The role comes from a `fis-last-role` cookie the login page
-writes. The report route follows the same rule, so **Generate report** still
-works offline. None of this grants access: a session cookie must already be
-present, and it only ever reaches the same public demo data.
+carrying a session, the dashboard renders the cached demo instead of redirecting
+to a login page that also can't reach Supabase. The role comes from a
+`fis-last-role` cookie the login page writes. The report route follows the same
+rule, so **Generate report** still works offline. None of this grants access: a
+session cookie must already be present, and it only ever reaches the same public
+demo data.
+
+**No middleware.** `@netlify/plugin-nextjs` 5.16.0 cannot bundle a Next 16
+middleware into a Netlify edge function, and the build fails outright when one
+exists. So each route gates itself instead: `/dashboard` and `/api/report` check
+the session directly, `/login` bounces anyone already signed in, and
+`<SessionKeeper>` handles the token refresh middleware used to do. If you add a
+`middleware.ts` or `proxy.ts` back, the deploy will break — put the check in the
+route.
 
 **The numbers are defensible.** `src/lib/analytics/risk.ts` holds the risk and
 valuation formula, with every assumption a valuer would argue about named as a
