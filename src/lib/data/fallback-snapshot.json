@@ -1,0 +1,1170 @@
+{
+  "farm": {
+    "id": "ff85a878-2208-4dda-9b69-fe0e6eb308b5",
+    "name": "Brakwater Smallholding",
+    "region": "Khomas Region, Namibia",
+    "area_ha": 25.2,
+    "centroid_lat": -22.44,
+    "centroid_lon": 17.0685,
+    "boundary_geojson": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            17.065439,
+            -22.441804
+          ],
+          [
+            17.071562,
+            -22.441804
+          ],
+          [
+            17.071562,
+            -22.438197
+          ],
+          [
+            17.065439,
+            -22.438197
+          ],
+          [
+            17.065439,
+            -22.441804
+          ]
+        ]
+      ]
+    },
+    "notes": "Modeled on a real 25.2 ha smallholding for sale at Brakwater, ~20 km north of Windhoek. Boundary is illustrative, not surveyed.",
+    "created_at": "2026-09-17T18:57:31.728783+00:00"
+  },
+  "zones": [
+    {
+      "id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "farm_id": "ff85a878-2208-4dda-9b69-fe0e6eb308b5",
+      "name": "Maize Block",
+      "land_use": "cropland",
+      "area_ha": 4.78,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.065439,
+              -22.4399
+            ],
+            [
+              17.0679,
+              -22.4399
+            ],
+            [
+              17.0679,
+              -22.438197
+            ],
+            [
+              17.065439,
+              -22.438197
+            ],
+            [
+              17.065439,
+              -22.4399
+            ]
+          ]
+        ]
+      },
+      "created_at": "2026-09-17T18:57:31.728783+00:00"
+    },
+    {
+      "id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "farm_id": "ff85a878-2208-4dda-9b69-fe0e6eb308b5",
+      "name": "North Grazing Camp",
+      "land_use": "grazing",
+      "area_ha": 7.12,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.0679,
+              -22.4399
+            ],
+            [
+              17.071562,
+              -22.4399
+            ],
+            [
+              17.071562,
+              -22.438197
+            ],
+            [
+              17.0679,
+              -22.438197
+            ],
+            [
+              17.0679,
+              -22.4399
+            ]
+          ]
+        ]
+      },
+      "created_at": "2026-09-17T18:57:31.728783+00:00"
+    },
+    {
+      "id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "farm_id": "ff85a878-2208-4dda-9b69-fe0e6eb308b5",
+      "name": "Riverbed Strip",
+      "land_use": "degraded",
+      "area_ha": 5.35,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.065439,
+              -22.441804
+            ],
+            [
+              17.0679,
+              -22.441804
+            ],
+            [
+              17.0679,
+              -22.4399
+            ],
+            [
+              17.065439,
+              -22.4399
+            ],
+            [
+              17.065439,
+              -22.441804
+            ]
+          ]
+        ]
+      },
+      "created_at": "2026-09-17T18:57:31.728783+00:00"
+    },
+    {
+      "id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "farm_id": "ff85a878-2208-4dda-9b69-fe0e6eb308b5",
+      "name": "South Grazing Camp",
+      "land_use": "grazing",
+      "area_ha": 7.95,
+      "geojson": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.0679,
+              -22.441804
+            ],
+            [
+              17.071562,
+              -22.441804
+            ],
+            [
+              17.071562,
+              -22.4399
+            ],
+            [
+              17.0679,
+              -22.4399
+            ],
+            [
+              17.0679,
+              -22.441804
+            ]
+          ]
+        ]
+      },
+      "created_at": "2026-09-17T18:57:31.728783+00:00"
+    }
+  ],
+  "latestByZone": [
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "value": 5.7,
+      "unit": "%",
+      "vendor_label": "Vendor 1",
+      "recorded_at": "2026-09-17T09:30:00+00:00"
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "value": 0.093,
+      "unit": "index",
+      "vendor_label": "Vendor 2",
+      "recorded_at": "2026-09-17T10:15:00+00:00"
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "value": 8.9,
+      "unit": "%",
+      "vendor_label": "Vendor 1",
+      "recorded_at": "2026-09-17T09:30:00+00:00"
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "value": 0.172,
+      "unit": "index",
+      "vendor_label": "Vendor 2",
+      "recorded_at": "2026-09-17T10:15:00+00:00"
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "value": 19.1,
+      "unit": "%",
+      "vendor_label": "Vendor 1",
+      "recorded_at": "2026-09-17T09:30:00+00:00"
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "value": 0.249,
+      "unit": "index",
+      "vendor_label": "Vendor 2",
+      "recorded_at": "2026-09-17T10:15:00+00:00"
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "value": 9.2,
+      "unit": "%",
+      "vendor_label": "Vendor 1",
+      "recorded_at": "2026-09-17T09:30:00+00:00"
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "value": 0.162,
+      "unit": "index",
+      "vendor_label": "Vendor 2",
+      "recorded_at": "2026-09-17T10:15:00+00:00"
+    }
+  ],
+  "monthlyByZone": [
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-09-01",
+      "avg_value": 0.231,
+      "min_value": 0.214,
+      "max_value": 0.248
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2025-09-01",
+      "avg_value": 19.177,
+      "min_value": 18,
+      "max_value": 20.5
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2025-09-01",
+      "avg_value": 10.331,
+      "min_value": 9.2,
+      "max_value": 11.3
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2025-09-01",
+      "avg_value": 5.646,
+      "min_value": 4.6,
+      "max_value": 6.9
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-09-01",
+      "avg_value": 0.156,
+      "min_value": 0.142,
+      "max_value": 0.169
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2025-09-01",
+      "avg_value": 0.153,
+      "min_value": 0.141,
+      "max_value": 0.165
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2025-09-01",
+      "avg_value": 9.485,
+      "min_value": 8.5,
+      "max_value": 10.5
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-09-01",
+      "avg_value": 0.098,
+      "min_value": 0.098,
+      "max_value": 0.098
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-10-01",
+      "avg_value": 0.125,
+      "min_value": 0.101,
+      "max_value": 0.137
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-10-01",
+      "avg_value": 0.198,
+      "min_value": 0.173,
+      "max_value": 0.222
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2025-10-01",
+      "avg_value": 11.494,
+      "min_value": 9.1,
+      "max_value": 14
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2025-10-01",
+      "avg_value": 20.935,
+      "min_value": 18.7,
+      "max_value": 23.4
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-10-01",
+      "avg_value": 0.276,
+      "min_value": 0.241,
+      "max_value": 0.326
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2025-10-01",
+      "avg_value": 12.335,
+      "min_value": 9.9,
+      "max_value": 14.7
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2025-10-01",
+      "avg_value": 0.193,
+      "min_value": 0.162,
+      "max_value": 0.221
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2025-10-01",
+      "avg_value": 7.448,
+      "min_value": 5.5,
+      "max_value": 9
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-11-01",
+      "avg_value": 0.159,
+      "min_value": 0.128,
+      "max_value": 0.198
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2025-11-01",
+      "avg_value": 9.617,
+      "min_value": 7.4,
+      "max_value": 11.4
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-11-01",
+      "avg_value": 0.365,
+      "min_value": 0.305,
+      "max_value": 0.433
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2025-11-01",
+      "avg_value": 0.272,
+      "min_value": 0.213,
+      "max_value": 0.303
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2025-11-01",
+      "avg_value": 15.453,
+      "min_value": 13.2,
+      "max_value": 17.8
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2025-11-01",
+      "avg_value": 24.157,
+      "min_value": 21.9,
+      "max_value": 26.4
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2025-11-01",
+      "avg_value": 15.02,
+      "min_value": 12.7,
+      "max_value": 17.7
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-11-01",
+      "avg_value": 0.275,
+      "min_value": 0.246,
+      "max_value": 0.329
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.366,
+      "min_value": 0.309,
+      "max_value": 0.408
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2025-12-01",
+      "avg_value": 18.5,
+      "min_value": 16.4,
+      "max_value": 21
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.193,
+      "min_value": 0.168,
+      "max_value": 0.215
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.511,
+      "min_value": 0.449,
+      "max_value": 0.596
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2025-12-01",
+      "avg_value": 11.7,
+      "min_value": 10.2,
+      "max_value": 13.1
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2025-12-01",
+      "avg_value": 26.91,
+      "min_value": 24.6,
+      "max_value": 28.6
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.378,
+      "min_value": 0.315,
+      "max_value": 0.422
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2025-12-01",
+      "avg_value": 18.587,
+      "min_value": 16.1,
+      "max_value": 20.9
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-01-01",
+      "avg_value": 21.1,
+      "min_value": 20,
+      "max_value": 22.7
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-01-01",
+      "avg_value": 13.455,
+      "min_value": 12.1,
+      "max_value": 14.8
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-01-01",
+      "avg_value": 0.245,
+      "min_value": 0.231,
+      "max_value": 0.26
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-01-01",
+      "avg_value": 0.633,
+      "min_value": 0.58,
+      "max_value": 0.696
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-01-01",
+      "avg_value": 29.055,
+      "min_value": 27.3,
+      "max_value": 30.8
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-01-01",
+      "avg_value": 20.861,
+      "min_value": 19,
+      "max_value": 22.6
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-01-01",
+      "avg_value": 0.46,
+      "min_value": 0.423,
+      "max_value": 0.501
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-01-01",
+      "avg_value": 0.449,
+      "min_value": 0.407,
+      "max_value": 0.478
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-02-01",
+      "avg_value": 0.522,
+      "min_value": 0.501,
+      "max_value": 0.534
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-02-01",
+      "avg_value": 21.896,
+      "min_value": 20.8,
+      "max_value": 23.1
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-02-01",
+      "avg_value": 22.071,
+      "min_value": 20.8,
+      "max_value": 23.2
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-02-01",
+      "avg_value": 0.506,
+      "min_value": 0.479,
+      "max_value": 0.535
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-02-01",
+      "avg_value": 29.979,
+      "min_value": 28.9,
+      "max_value": 31
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-02-01",
+      "avg_value": 0.703,
+      "min_value": 0.677,
+      "max_value": 0.717
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-02-01",
+      "avg_value": 13.95,
+      "min_value": 12.8,
+      "max_value": 15
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-02-01",
+      "avg_value": 0.271,
+      "min_value": 0.258,
+      "max_value": 0.279
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-03-01",
+      "avg_value": 21.223,
+      "min_value": 19.3,
+      "max_value": 22.6
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-03-01",
+      "avg_value": 13.594,
+      "min_value": 11.9,
+      "max_value": 14.6
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-03-01",
+      "avg_value": 0.719,
+      "min_value": 0.694,
+      "max_value": 0.735
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-03-01",
+      "avg_value": 0.523,
+      "min_value": 0.498,
+      "max_value": 0.545
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-03-01",
+      "avg_value": 0.512,
+      "min_value": 0.502,
+      "max_value": 0.521
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-03-01",
+      "avg_value": 20.9,
+      "min_value": 19.3,
+      "max_value": 22.8
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-03-01",
+      "avg_value": 29.097,
+      "min_value": 28,
+      "max_value": 30.6
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-03-01",
+      "avg_value": 0.272,
+      "min_value": 0.255,
+      "max_value": 0.292
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-04-01",
+      "avg_value": 11.853,
+      "min_value": 10.5,
+      "max_value": 13.1
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-04-01",
+      "avg_value": 18.363,
+      "min_value": 16,
+      "max_value": 20.6
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-04-01",
+      "avg_value": 18.777,
+      "min_value": 16.8,
+      "max_value": 20.8
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-04-01",
+      "avg_value": 27.2,
+      "min_value": 25.5,
+      "max_value": 29.4
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-04-01",
+      "avg_value": 0.478,
+      "min_value": 0.429,
+      "max_value": 0.503
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-04-01",
+      "avg_value": 0.263,
+      "min_value": 0.243,
+      "max_value": 0.281
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-04-01",
+      "avg_value": 0.487,
+      "min_value": 0.439,
+      "max_value": 0.522
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-04-01",
+      "avg_value": 0.668,
+      "min_value": 0.615,
+      "max_value": 0.709
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-05-01",
+      "avg_value": 9.558,
+      "min_value": 7.5,
+      "max_value": 11.3
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-05-01",
+      "avg_value": 0.399,
+      "min_value": 0.353,
+      "max_value": 0.448
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-05-01",
+      "avg_value": 14.861,
+      "min_value": 12.2,
+      "max_value": 16.8
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-05-01",
+      "avg_value": 0.565,
+      "min_value": 0.522,
+      "max_value": 0.61
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-05-01",
+      "avg_value": 24.239,
+      "min_value": 21.8,
+      "max_value": 26.4
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-05-01",
+      "avg_value": 15.645,
+      "min_value": 13.8,
+      "max_value": 17.9
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-05-01",
+      "avg_value": 0.41,
+      "min_value": 0.374,
+      "max_value": 0.458
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-05-01",
+      "avg_value": 0.229,
+      "min_value": 0.203,
+      "max_value": 0.263
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-06-01",
+      "avg_value": 0.437,
+      "min_value": 0.375,
+      "max_value": 0.505
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-06-01",
+      "avg_value": 0.185,
+      "min_value": 0.144,
+      "max_value": 0.214
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-06-01",
+      "avg_value": 20.833,
+      "min_value": 19,
+      "max_value": 22.2
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-06-01",
+      "avg_value": 7.68,
+      "min_value": 5.9,
+      "max_value": 9.4
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-06-01",
+      "avg_value": 12.42,
+      "min_value": 10.5,
+      "max_value": 14.1
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-06-01",
+      "avg_value": 11.747,
+      "min_value": 10.1,
+      "max_value": 14.2
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-06-01",
+      "avg_value": 0.307,
+      "min_value": 0.263,
+      "max_value": 0.361
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-06-01",
+      "avg_value": 0.306,
+      "min_value": 0.267,
+      "max_value": 0.358
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-07-01",
+      "avg_value": 0.132,
+      "min_value": 0.114,
+      "max_value": 0.155
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-07-01",
+      "avg_value": 0.231,
+      "min_value": 0.188,
+      "max_value": 0.262
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-07-01",
+      "avg_value": 5.635,
+      "min_value": 4.1,
+      "max_value": 6.9
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-07-01",
+      "avg_value": 0.224,
+      "min_value": 0.171,
+      "max_value": 0.28
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-07-01",
+      "avg_value": 0.305,
+      "min_value": 0.268,
+      "max_value": 0.339
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-07-01",
+      "avg_value": 9.174,
+      "min_value": 7.9,
+      "max_value": 10.7
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-07-01",
+      "avg_value": 10.029,
+      "min_value": 8.5,
+      "max_value": 11.6
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-07-01",
+      "avg_value": 19.006,
+      "min_value": 17.5,
+      "max_value": 20.6
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-08-01",
+      "avg_value": 5.077,
+      "min_value": 3.8,
+      "max_value": 6.3
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-08-01",
+      "avg_value": 9.206,
+      "min_value": 7.8,
+      "max_value": 10.3
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-08-01",
+      "avg_value": 0.106,
+      "min_value": 0.09,
+      "max_value": 0.125
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-08-01",
+      "avg_value": 0.172,
+      "min_value": 0.146,
+      "max_value": 0.193
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-08-01",
+      "avg_value": 8.3,
+      "min_value": 6.8,
+      "max_value": 9.2
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-08-01",
+      "avg_value": 18.126,
+      "min_value": 16.9,
+      "max_value": 19.3
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-08-01",
+      "avg_value": 0.154,
+      "min_value": 0.13,
+      "max_value": 0.175
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-08-01",
+      "avg_value": 0.238,
+      "min_value": 0.223,
+      "max_value": 0.267
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-09-01",
+      "avg_value": 0.162,
+      "min_value": 0.154,
+      "max_value": 0.172
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-09-01",
+      "avg_value": 18.724,
+      "min_value": 17.5,
+      "max_value": 19.7
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-09-01",
+      "avg_value": 9.765,
+      "min_value": 8.6,
+      "max_value": 10.6
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-09-01",
+      "avg_value": 8.565,
+      "min_value": 7.3,
+      "max_value": 9.8
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-09-01",
+      "avg_value": 0.142,
+      "min_value": 0.13,
+      "max_value": 0.162
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-09-01",
+      "avg_value": 0.11,
+      "min_value": 0.093,
+      "max_value": 0.122
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-09-01",
+      "avg_value": 0.23,
+      "min_value": 0.215,
+      "max_value": 0.249
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-09-01",
+      "avg_value": 5.265,
+      "min_value": 4.3,
+      "max_value": 6.1
+    }
+  ],
+  "monthlyRainfall": [
+    {
+      "month": "2025-09-01",
+      "total_mm": 0,
+      "rain_days": 0
+    },
+    {
+      "month": "2025-10-01",
+      "total_mm": 0,
+      "rain_days": 0
+    },
+    {
+      "month": "2025-11-01",
+      "total_mm": 23.9,
+      "rain_days": 6
+    },
+    {
+      "month": "2025-12-01",
+      "total_mm": 38.2,
+      "rain_days": 4
+    },
+    {
+      "month": "2026-01-01",
+      "total_mm": 66.3,
+      "rain_days": 9
+    },
+    {
+      "month": "2026-02-01",
+      "total_mm": 68,
+      "rain_days": 14
+    },
+    {
+      "month": "2026-03-01",
+      "total_mm": 67,
+      "rain_days": 14
+    },
+    {
+      "month": "2026-04-01",
+      "total_mm": 32.3,
+      "rain_days": 6
+    },
+    {
+      "month": "2026-05-01",
+      "total_mm": 5.1,
+      "rain_days": 1
+    },
+    {
+      "month": "2026-06-01",
+      "total_mm": 0.8,
+      "rain_days": 2
+    },
+    {
+      "month": "2026-07-01",
+      "total_mm": 0.9,
+      "rain_days": 3
+    },
+    {
+      "month": "2026-08-01",
+      "total_mm": 0.8,
+      "rain_days": 2
+    },
+    {
+      "month": "2026-09-01",
+      "total_mm": 0,
+      "rain_days": 0
+    }
+  ],
+  "vendors": [
+    {
+      "vendor_label": "Vendor 1",
+      "metric_type": "soil_moisture",
+      "last_reading_at": "2026-09-17T09:30:00+00:00",
+      "reading_count": 1460
+    },
+    {
+      "vendor_label": "Vendor 2",
+      "metric_type": "ndvi",
+      "last_reading_at": "2026-09-17T10:15:00+00:00",
+      "reading_count": 292
+    },
+    {
+      "vendor_label": "Vendor 3",
+      "metric_type": "rainfall",
+      "last_reading_at": "2026-09-17T06:00:00+00:00",
+      "reading_count": 365
+    }
+  ],
+  "source": "fallback",
+  "generatedAt": "2026-09-17T19:18:10.750Z"
+}

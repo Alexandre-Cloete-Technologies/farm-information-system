@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# @netlify/plugin-nextjs handles the App Router, server components, the proxy
+# (middleware) and the Node-runtime report route.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
