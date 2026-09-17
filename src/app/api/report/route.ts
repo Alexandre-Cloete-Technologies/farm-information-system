@@ -25,6 +25,25 @@ async function runProbe(stage: string): Promise<Response> {
       steps.push(`assessed risk=${a.droughtRisk} value=${a.estimatedValueNad}`);
     }
 
+    if (stage === "diff") {
+      const live = await getFarmSnapshot();
+      const fallback = (await import("@/lib/data/fallback-snapshot.json")).default as never;
+      const shape = (s: Record<string, unknown>) => {
+        const farm = s.farm as Record<string, unknown>;
+        const zones = s.zones as Record<string, unknown>[];
+        const rain = s.monthlyRainfall as Record<string, unknown>[];
+        return {
+          area_ha: `${typeof farm.area_ha}:${JSON.stringify(farm.area_ha)}`,
+          boundary: typeof farm.boundary_geojson,
+          zoneAreas: zones.slice(0, 2).map((z) => `${typeof z.area_ha}:${JSON.stringify(z.area_ha)}`),
+          rainMonths: rain.length,
+          rainFirst: rain[0] ? JSON.stringify(rain[0]) : null,
+        };
+      };
+      steps.push(`live=${JSON.stringify(shape(live as never))}`);
+      steps.push(`fallback=${JSON.stringify(shape(fallback))}`);
+    }
+
     if (stage === "doc-fallback") {
       const { valuationReportDocument } = await import("@/lib/report/ValuationReport");
       const fallback = (await import("@/lib/data/fallback-snapshot.json")).default;
