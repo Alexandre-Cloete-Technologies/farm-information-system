@@ -1,4 +1,3 @@
-import { renderToBuffer } from "@react-pdf/renderer";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { hasSessionCookie, isAuthUnreachable } from "@/lib/supabase/offline";
@@ -30,6 +29,14 @@ export async function GET() {
   }
 
   try {
+    // Imported here rather than at module scope on purpose. react-pdf pulls in
+    // a deep native/WASM dependency tree, and if any of it fails to resolve in
+    // the deployed bundle a top-level import takes the whole function down at
+    // init — the client sees a bare 502 that this handler never gets to catch.
+    // Inside the try, the same failure becomes the retryable error the Bank
+    // view already knows how to show.
+    const { renderToBuffer } = await import("@react-pdf/renderer");
+
     const snapshot = await getFarmSnapshot();
     const buffer = await renderToBuffer(valuationReportDocument(snapshot));
 
