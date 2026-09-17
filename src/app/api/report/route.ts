@@ -13,27 +13,40 @@ async function runProbe(stage: string): Promise<Response> {
   try {
     steps.push("start");
 
-    if (stage >= "2") {
-      const m = await import("@react-pdf/renderer");
-      steps.push(`react-pdf imported (renderToBuffer=${typeof m.renderToBuffer})`);
+    if (stage === "snapshot") {
+      const s = await getFarmSnapshot();
+      steps.push(`snapshot source=${s.source} zones=${s.zones.length} readings=${s.monthlyByZone.length}`);
     }
-    if (stage >= "3") {
-      await import("@/lib/report/ValuationReport");
-      steps.push("ValuationReport imported");
+
+    if (stage === "assess") {
+      const { assessFarm } = await import("@/lib/analytics/risk");
+      const s = await getFarmSnapshot();
+      const a = assessFarm(s);
+      steps.push(`assessed risk=${a.droughtRisk} value=${a.estimatedValueNad}`);
     }
-    if (stage >= "4") {
+
+    if (stage === "doc-fallback") {
       const { valuationReportDocument } = await import("@/lib/report/ValuationReport");
-      const snapshot = await getFarmSnapshot();
-      valuationReportDocument(snapshot);
-      steps.push(`document element built (source=${snapshot.source})`);
+      const fallback = (await import("@/lib/data/fallback-snapshot.json")).default;
+      valuationReportDocument(fallback as never);
+      steps.push("document element built from bundled snapshot");
     }
-    if (stage >= "5") {
+
+    if (stage === "doc-live") {
+      const { valuationReportDocument } = await import("@/lib/report/ValuationReport");
+      const s = await getFarmSnapshot();
+      valuationReportDocument(s);
+      steps.push(`document element built from ${s.source} snapshot`);
+    }
+
+    if (stage === "render-fallback") {
       const [{ renderToBuffer }, { valuationReportDocument }] = await Promise.all([
         import("@react-pdf/renderer"),
         import("@/lib/report/ValuationReport"),
       ]);
-      const buffer = await renderToBuffer(valuationReportDocument(await getFarmSnapshot()));
-      steps.push(`rendered ${buffer.length} bytes`);
+      const fallback = (await import("@/lib/data/fallback-snapshot.json")).default;
+      const buffer = await renderToBuffer(valuationReportDocument(fallback as never));
+      steps.push(`rendered ${buffer.length} bytes from bundled snapshot`);
     }
 
     return NextResponse.json({ ok: true, stage, steps });
