@@ -71,14 +71,26 @@ function EndLabels({ series, atLabel }: { series: SeriesPoint[]; atLabel: string
   );
 }
 
+/**
+ * Months of history to plot.
+ *
+ * The readings table now holds eight seasons of satellite data. Drawing all of
+ * it squeezes the current season into a few pixels at the left edge, so the
+ * chart shows a rolling window and the long record is used for scoring and the
+ * report instead.
+ */
+const WINDOW_MONTHS = 13;
+
 export function ZoneTrendChart({
   snapshot,
   metric,
   height = 240,
+  monthsToShow = WINDOW_MONTHS,
 }: {
   snapshot: FarmSnapshot;
   metric: Exclude<MetricType, "rainfall">;
   height?: number;
+  monthsToShow?: number;
 }) {
   const [showTable, setShowTable] = useState(false);
   const config = METRIC_CONFIG[metric];
@@ -100,11 +112,12 @@ export function ZoneTrendChart({
       byMonth.set(entry.month, row);
     }
 
-    return {
-      rows: [...byMonth.values()].sort((a, b) => String(a.month).localeCompare(String(b.month))),
-      zones: zoneList,
-    };
-  }, [snapshot, metric]);
+    const ordered = [...byMonth.values()].sort((a, b) =>
+      String(a.month).localeCompare(String(b.month)),
+    );
+
+    return { rows: ordered.slice(-monthsToShow), zones: zoneList };
+  }, [snapshot, metric, monthsToShow]);
 
   if (rows.length === 0) {
     return <p className="py-8 text-center text-sm text-muted">No readings for this period.</p>;
