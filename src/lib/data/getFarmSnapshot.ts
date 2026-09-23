@@ -38,10 +38,14 @@ async function readLive(): Promise<FarmSnapshot> {
   const [farmRes, zonesRes, latestRes, monthlyRes, rainRes, vendorRes] = await Promise.all([
     supabase.from("farms").select("*").limit(1).single(),
     supabase.from("farm_zones").select("*").order("name"),
-    supabase.from("zone_latest_metrics").select("zone_id, metric_type, value, unit, vendor_label, recorded_at"),
+    supabase
+      .from("zone_latest_metrics")
+      .select(
+        "zone_id, metric_type, value, unit, vendor_label, recorded_at, origin, source_platform, source_product, observed_on",
+      ),
     supabase
       .from("zone_monthly_metrics")
-      .select("zone_id, metric_type, month, avg_value, min_value, max_value")
+      .select("zone_id, metric_type, month, avg_value, min_value, max_value, has_satellite")
       .order("month"),
     supabase.from("farm_monthly_rainfall").select("month, total_mm, rain_days").order("month"),
     supabase.from("vendor_feed_status").select("*").order("vendor_label"),

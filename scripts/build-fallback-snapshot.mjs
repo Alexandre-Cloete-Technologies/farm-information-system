@@ -46,8 +46,15 @@ async function fetchAll(table, columns, order) {
 const [farms, zones, latestByZone, monthlyByZone, monthlyRainfall, vendors] = await Promise.all([
   fetchAll("farms", "*"),
   fetchAll("farm_zones", "*", "name"),
-  fetchAll("zone_latest_metrics", "zone_id, metric_type, value, unit, vendor_label, recorded_at"),
-  fetchAll("zone_monthly_metrics", "zone_id, metric_type, month, avg_value, min_value, max_value", "month"),
+  fetchAll(
+    "zone_latest_metrics",
+    "zone_id, metric_type, value, unit, vendor_label, recorded_at, origin, source_platform, source_product, observed_on",
+  ),
+  fetchAll(
+    "zone_monthly_metrics",
+    "zone_id, metric_type, month, avg_value, min_value, max_value, has_satellite",
+    "month",
+  ),
   fetchAll("farm_monthly_rainfall", "month, total_mm, rain_days", "month"),
   fetchAll("vendor_feed_status", "*", "vendor_label"),
 ]);

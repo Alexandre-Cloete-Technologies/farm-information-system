@@ -66,6 +66,38 @@ export function SeverityDot({ severity }: { severity: "ok" | "watch" | "action" 
   return <span className={`inline-block h-2 w-2 shrink-0 rounded-full ${color}`} aria-hidden />;
 }
 
+/**
+ * Marks a figure as measured or modelled.
+ *
+ * Deliberately a text label rather than colour alone — this is the distinction
+ * a lender relies on, so it must survive a projector, a printout and a
+ * colour-blind reader.
+ */
+export function OriginBadge({
+  measured,
+  title,
+  className = "",
+}: {
+  measured: boolean;
+  title?: string;
+  className?: string;
+}) {
+  return (
+    <span
+      title={title}
+      className={`inline-flex shrink-0 items-center gap-1 rounded-sm border px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide ${
+        measured ? "border-ok/40 text-ok" : "border-watch/40 text-watch"
+      } ${className}`}
+    >
+      <span
+        className={`inline-block h-1.5 w-1.5 rounded-full ${measured ? "bg-ok" : "bg-watch"}`}
+        aria-hidden
+      />
+      {measured ? "Satellite" : "Simulated"}
+    </span>
+  );
+}
+
 export function EmptyState({ message }: { message: string }) {
   return (
     <p className="rounded-md border border-dashed border-border px-3 py-6 text-center text-sm text-muted">

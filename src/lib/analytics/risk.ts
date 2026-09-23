@@ -7,8 +7,18 @@ import type { FarmSnapshot, FarmZone, MetricType, ZoneLatestMetric } from "@/lib
 export const REFERENCE = {
   /** Long-term mean annual rainfall for the Khomas Region, mm. */
   ANNUAL_RAINFALL_NORMAL_MM: 372,
-  /** Peak growing-season NDVI a healthy parcel in this region reaches. */
-  PEAK_NDVI_REFERENCE: 0.62,
+  /**
+   * Peak growing-season NDVI a normal season reaches on this parcel.
+   *
+   * Measured, not assumed: the mean of seasonal peak NDVI across 24
+   * season-zone pairs of Sentinel-2 data (2018/19 to 2025/26) for the three
+   * registered zones. The previous value of 0.62 was a guess, and the
+   * satellite record shows it is the best season in nine years — scoring every
+   * year against an exceptional one made normal seasons look deficient.
+   *
+   * Range observed: 0.226 (the 2018/19 drought) to 0.683.
+   */
+  PEAK_NDVI_REFERENCE: 0.509,
   /** Recommended stocking rate for Khomas rangeland in a normal year, ha per LSU. */
   HA_PER_LSU_NORMAL: 15,
   /** Indicative peri-urban smallholding land rate near Brakwater, N$ per hectare. */
@@ -59,10 +69,40 @@ function areaWeighted(zones: FarmZone[], valueOf: (zone: FarmZone) => number | u
   return area === 0 ? 0 : weighted / area;
 }
 
-/** Highest monthly average this season for one metric in one zone. */
-function peakMonthly(snapshot: FarmSnapshot, zoneId: string, metric: MetricType): number | undefined {
+/** Months of history the current-season figures are drawn from. */
+const SEASON_WINDOW_MONTHS = 12;
+
+/**
+ * Start of the rolling window, derived from the newest month in the data
+ * rather than today's date so the figure is stable and testable.
+ */
+function windowStart(snapshot: FarmSnapshot): string | null {
+  const months = snapshot.monthlyByZone.map((m) => m.month).sort();
+  const latest = months.at(-1);
+  if (!latest) return null;
+  const d = new Date(latest);
+  d.setMonth(d.getMonth() - (SEASON_WINDOW_MONTHS - 1));
+  return d.toISOString().slice(0, 10);
+}
+
+/**
+ * Highest monthly value for one metric in one zone over the rolling window.
+ *
+ * Deliberately windowed: the readings table now holds eight seasons of
+ * satellite history, and an unbounded max would compare the current season
+ * against the best month on record, making every farm look healthy.
+ */
+function peakMonthly(
+  snapshot: FarmSnapshot,
+  zoneId: string,
+  metric: MetricType,
+  since: string | null,
+): number | undefined {
   const values = snapshot.monthlyByZone
-    .filter((m) => m.zone_id === zoneId && m.metric_type === metric)
+    .filter(
+      (m) =>
+        m.zone_id === zoneId && m.metric_type === metric && (since === null || m.month >= since),
+    )
     .map((m) => m.max_value);
   return values.length ? Math.max(...values) : undefined;
 }
@@ -96,7 +136,8 @@ export function assessFarm(snapshot: FarmSnapshot): RiskAssessment {
     Math.round(snapshot.monthlyRainfall.reduce((sum, m) => sum + m.total_mm, 0) * 10) / 10;
   const rainfallIndex = seasonRainfallMm / REFERENCE.ANNUAL_RAINFALL_NORMAL_MM;
 
-  const peakNdvi = areaWeighted(zones, (zone) => peakMonthly(snapshot, zone.id, "ndvi"));
+  const since = windowStart(snapshot);
+  const peakNdvi = areaWeighted(zones, (zone) => peakMonthly(snapshot, zone.id, "ndvi", since));
 
   const totalHa = zones.reduce((sum, z) => sum + z.area_ha, 0) || farm.area_ha;
   const degradedHa = zones.filter((z) => z.land_use === "degraded").reduce((sum, z) => sum + z.area_ha, 0);

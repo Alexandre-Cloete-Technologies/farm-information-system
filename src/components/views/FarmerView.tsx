@@ -1,6 +1,7 @@
 import { FarmMap } from "@/components/FarmMap";
 import { RainfallChart } from "@/components/charts/RainfallChart";
-import { EmptyState, Panel, SeverityDot, Stat } from "@/components/ui/Panel";
+import { EmptyState, OriginBadge, Panel, SeverityDot, Stat } from "@/components/ui/Panel";
+import { isMeasured } from "@/lib/data/provenance";
 import { daysSinceRain, zoneConditions } from "@/lib/analytics/agronomy";
 import { assessFarm } from "@/lib/analytics/risk";
 import type { FarmSnapshot } from "@/lib/data/types";
@@ -96,9 +97,13 @@ export function FarmerView({ snapshot }: { snapshot: FarmSnapshot }) {
                   className="flex items-start justify-between gap-3 rounded-md bg-surface-muted px-3 py-2"
                 >
                   <div className="min-w-0">
-                    <p className="flex items-center gap-1.5 text-sm font-medium">
+                    <p className="flex flex-wrap items-center gap-1.5 text-sm font-medium">
                       <SeverityDot severity={condition.severity} />
                       {condition.zone.name}
+                      <OriginBadge
+                        measured={isMeasured(snapshot, condition.zone.id, "ndvi")}
+                        title="Source of this zone's vegetation index"
+                      />
                     </p>
                     <p className="text-xs text-muted">
                       {LAND_USE_LABELS[condition.zone.land_use]} · {condition.zone.area_ha} ha ·{" "}

@@ -34,6 +34,9 @@ export interface FarmZone {
   geojson: GeoJsonPolygon;
 }
 
+/** Whether a figure was measured by satellite or produced by the demo model. */
+export type ReadingOrigin = "simulated" | "satellite";
+
 export interface ZoneLatestMetric {
   zone_id: string;
   metric_type: MetricType;
@@ -41,6 +44,11 @@ export interface ZoneLatestMetric {
   unit: string;
   vendor_label: string;
   recorded_at: string;
+  origin: ReadingOrigin;
+  source_platform: string | null;
+  source_product: string | null;
+  /** Satellite acquisition date. Null for simulated readings. */
+  observed_on: string | null;
 }
 
 export interface ZoneMonthlyMetric {
@@ -50,6 +58,7 @@ export interface ZoneMonthlyMetric {
   avg_value: number;
   min_value: number;
   max_value: number;
+  has_satellite: boolean;
 }
 
 export interface MonthlyRainfall {
@@ -63,6 +72,8 @@ export interface VendorFeed {
   metric_type: MetricType;
   last_reading_at: string;
   reading_count: number;
+  origin: ReadingOrigin;
+  source_platform: string | null;
 }
 
 /**

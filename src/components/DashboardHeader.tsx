@@ -1,6 +1,11 @@
 import { SignOutButton } from "./SignOutButton";
+import {
+  COPERNICUS_ATTRIBUTION,
+  describeProvenance,
+  formatObservedOn,
+} from "@/lib/data/provenance";
 import type { FarmSnapshot, Profile } from "@/lib/data/types";
-import { ROLE_LABELS } from "@/lib/data/types";
+import { METRIC_LABELS, ROLE_LABELS } from "@/lib/data/types";
 
 export function DashboardHeader({ profile, snapshot }: { profile: Profile; snapshot: FarmSnapshot }) {
   const asOf = new Date(snapshot.generatedAt).toLocaleString("en-GB", {
@@ -40,33 +45,55 @@ export function DashboardHeader({ profile, snapshot }: { profile: Profile; snaps
   );
 }
 
+/**
+ * Where each figure on the page comes from.
+ *
+ * A lender has to be able to tell a measurement from a model at a glance, so
+ * this states it per metric rather than hiding it in a footnote.
+ */
 export function VendorStrip({ snapshot }: { snapshot: FarmSnapshot }) {
-  const metricNames: Record<string, string> = {
-    soil_moisture: "Soil moisture",
-    ndvi: "Vegetation index",
-    rainfall: "Rainfall",
-  };
+  const provenance = describeProvenance(snapshot);
 
   return (
     <div className="border-b border-border bg-surface-muted">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-6 gap-y-1 px-4 py-2 text-xs text-muted">
-        <span className="font-medium uppercase tracking-wide">Vendor feeds</span>
-        {snapshot.vendors.map((vendor) => (
-          <span key={`${vendor.vendor_label}-${vendor.metric_type}`} className="flex items-center gap-1.5">
-            <span
-              className={`inline-block h-1.5 w-1.5 rounded-full ${
-                snapshot.source === "live" ? "bg-ok" : "bg-watch"
-              }`}
-              aria-hidden
-            />
-            {vendor.vendor_label} · {metricNames[vendor.metric_type] ?? vendor.metric_type} ·{" "}
-            {vendor.reading_count.toLocaleString("en-GB")} readings
-          </span>
-        ))}
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-5 gap-y-1.5 px-4 py-2 text-xs text-muted">
+        <span className="font-medium uppercase tracking-wide">Data sources</span>
+
+        {provenance.byMetric.map((m) => {
+          const measured = m.origin === "satellite";
+          return (
+            <span key={m.metric} className="flex items-center gap-1.5">
+              <span
+                className={`inline-block h-1.5 w-1.5 rounded-full ${measured ? "bg-ok" : "bg-watch"}`}
+                aria-hidden
+              />
+              <span className="font-medium text-foreground">{METRIC_LABELS[m.metric]}</span>
+              {measured ? (
+                <>
+                  <span>· {m.instrument}</span>
+                  <span>· observed {formatObservedOn(m.observedOn)}</span>
+                  {m.simulatedZones.length > 0 ? (
+                    <span className="text-watch">· {m.simulatedZones.length} zone simulated</span>
+                  ) : null}
+                </>
+              ) : (
+                <span className="text-watch">· simulated</span>
+              )}
+            </span>
+          );
+        })}
+
         <span className="ml-auto">
           {snapshot.source === "live" ? "Connected" : "Serving cached snapshot"}
         </span>
       </div>
+
+      {provenance.anySatellite ? (
+        <div className="mx-auto max-w-7xl px-4 pb-1.5 text-[10.5px] leading-snug text-muted">
+          {COPERNICUS_ATTRIBUTION} Satellite imagery is not daily — figures show the latest available
+          observation, not a live reading.
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -141,7 +141,7 @@
         ]
       ]
     },
-    "notes": "Boundary from OpenStreetMap way 701878889 (landuse=farmland), Brakwater, ~20 km north of Windhoek. Real surveyed outline; management zones are a derived subdivision.",
+    "notes": "Boundary from OpenStreetMap way 701878889 (landuse=farmland), Brakwater, ~20 km north of Windhoek. Real surveyed outline; management zones are a derived subdivision. Riverbed zone reclassified from degraded to grazing on 2026-09-23 based on eight seasons of measured Sentinel-2 NDVI.",
     "created_at": "2026-09-17T18:57:31.728783+00:00"
   },
   "zones": [
@@ -310,8 +310,8 @@
     {
       "id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "farm_id": "ff85a878-2208-4dda-9b69-fe0e6eb308b5",
-      "name": "Riverbed Strip",
-      "land_use": "degraded",
+      "name": "Riverbed Camp",
+      "land_use": "grazing",
       "area_ha": 3.51,
       "geojson": {
         "type": "Polygon",
@@ -406,76 +406,2593 @@
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "metric_type": "soil_moisture",
-      "value": 5.23756192457469,
+      "value": 4.25192856227245,
       "unit": "%",
       "vendor_label": "Vendor 1",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "recorded_at": "2026-09-23T04:36:00.03761+00:00",
+      "origin": "simulated",
+      "source_platform": null,
+      "source_product": null,
+      "observed_on": null
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "metric_type": "ndvi",
-      "value": 0.0914673855871519,
+      "value": 0.1467,
       "unit": "index",
-      "vendor_label": "Vendor 2",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "vendor_label": "DynaCrop · Sentinel-2",
+      "recorded_at": "2026-09-22T10:15:00+00:00",
+      "origin": "satellite",
+      "source_platform": "Sentinel-2",
+      "source_product": "NDVI",
+      "observed_on": "2026-09-22"
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "soil_moisture",
-      "value": 9.15938932546636,
+      "value": 27.6849238624832,
       "unit": "%",
       "vendor_label": "Vendor 1",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "recorded_at": "2026-09-23T04:36:00.03761+00:00",
+      "origin": "simulated",
+      "source_platform": null,
+      "source_product": null,
+      "observed_on": null
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "ndvi",
-      "value": 0.189087948690107,
+      "value": 0.174,
       "unit": "index",
-      "vendor_label": "Vendor 2",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "vendor_label": "DynaCrop · Sentinel-2",
+      "recorded_at": "2026-09-22T10:15:00+00:00",
+      "origin": "satellite",
+      "source_platform": "Sentinel-2",
+      "source_product": "NDVI",
+      "observed_on": "2026-09-22"
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
       "metric_type": "soil_moisture",
-      "value": 16.7409517632624,
+      "value": 14.1208912377627,
       "unit": "%",
       "vendor_label": "Vendor 1",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "recorded_at": "2026-09-23T04:36:00.03761+00:00",
+      "origin": "simulated",
+      "source_platform": null,
+      "source_product": null,
+      "observed_on": null
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
       "metric_type": "ndvi",
-      "value": 0.2368466611138,
+      "value": 0.1749,
       "unit": "index",
-      "vendor_label": "Vendor 2",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "vendor_label": "DynaCrop · Sentinel-2",
+      "recorded_at": "2026-09-22T10:15:00+00:00",
+      "origin": "satellite",
+      "source_platform": "Sentinel-2",
+      "source_product": "NDVI",
+      "observed_on": "2026-09-22"
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
       "metric_type": "soil_moisture",
-      "value": 10.044652512617,
+      "value": 8.1002323963966,
       "unit": "%",
       "vendor_label": "Vendor 1",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "recorded_at": "2026-09-23T04:36:00.03761+00:00",
+      "origin": "simulated",
+      "source_platform": null,
+      "source_product": null,
+      "observed_on": null
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
       "metric_type": "ndvi",
-      "value": 0.159953156461051,
+      "value": 0.149672574117503,
       "unit": "index",
       "vendor_label": "Vendor 2",
-      "recorded_at": "2026-09-17T21:30:00.04101+00:00"
+      "recorded_at": "2026-09-23T04:36:00.03761+00:00",
+      "origin": "simulated",
+      "source_platform": null,
+      "source_product": null,
+      "observed_on": null
     }
   ],
   "monthlyByZone": [
     {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-01-01",
+      "avg_value": 0.172,
+      "min_value": 0.158,
+      "max_value": 0.186,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-01-01",
+      "avg_value": 0.143,
+      "min_value": 0.12,
+      "max_value": 0.163,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-01-01",
+      "avg_value": 0.205,
+      "min_value": 0.177,
+      "max_value": 0.23,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-02-01",
+      "avg_value": 0.247,
+      "min_value": 0.197,
+      "max_value": 0.28,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-02-01",
+      "avg_value": 0.195,
+      "min_value": 0.158,
+      "max_value": 0.221,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-02-01",
+      "avg_value": 0.173,
+      "min_value": 0.131,
+      "max_value": 0.206,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-03-01",
+      "avg_value": 0.175,
+      "min_value": 0.164,
+      "max_value": 0.196,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-03-01",
+      "avg_value": 0.19,
+      "min_value": 0.147,
+      "max_value": 0.233,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-03-01",
+      "avg_value": 0.24,
+      "min_value": 0.177,
+      "max_value": 0.299,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-04-01",
+      "avg_value": 0.427,
+      "min_value": 0.309,
+      "max_value": 0.479,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-04-01",
+      "avg_value": 0.423,
+      "min_value": 0.318,
+      "max_value": 0.534,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-04-01",
+      "avg_value": 0.455,
+      "min_value": 0.228,
+      "max_value": 0.57,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-05-01",
+      "avg_value": 0.346,
+      "min_value": 0.329,
+      "max_value": 0.36,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-05-01",
+      "avg_value": 0.395,
+      "min_value": 0.359,
+      "max_value": 0.417,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-05-01",
+      "avg_value": 0.375,
+      "min_value": 0.351,
+      "max_value": 0.385,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-06-01",
+      "avg_value": 0.31,
+      "min_value": 0.26,
+      "max_value": 0.351,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-06-01",
+      "avg_value": 0.273,
+      "min_value": 0.22,
+      "max_value": 0.311,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-06-01",
+      "avg_value": 0.238,
+      "min_value": 0.208,
+      "max_value": 0.263,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-07-01",
+      "avg_value": 0.192,
+      "min_value": 0.176,
+      "max_value": 0.219,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-07-01",
+      "avg_value": 0.195,
+      "min_value": 0.183,
+      "max_value": 0.211,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-07-01",
+      "avg_value": 0.231,
+      "min_value": 0.21,
+      "max_value": 0.257,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-08-01",
+      "avg_value": 0.196,
+      "min_value": 0.17,
+      "max_value": 0.229,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-08-01",
+      "avg_value": 0.163,
+      "min_value": 0.141,
+      "max_value": 0.182,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-08-01",
+      "avg_value": 0.177,
+      "min_value": 0.155,
+      "max_value": 0.199,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-09-01",
+      "avg_value": 0.183,
+      "min_value": 0.173,
+      "max_value": 0.196,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-09-01",
+      "avg_value": 0.143,
+      "min_value": 0.126,
+      "max_value": 0.153,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-09-01",
+      "avg_value": 0.166,
+      "min_value": 0.155,
+      "max_value": 0.175,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-10-01",
+      "avg_value": 0.176,
+      "min_value": 0.17,
+      "max_value": 0.188,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-10-01",
+      "avg_value": 0.222,
+      "min_value": 0.204,
+      "max_value": 0.234,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-10-01",
+      "avg_value": 0.148,
+      "min_value": 0.142,
+      "max_value": 0.159,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-11-01",
+      "avg_value": 0.179,
+      "min_value": 0.168,
+      "max_value": 0.19,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-11-01",
+      "avg_value": 0.221,
+      "min_value": 0.21,
+      "max_value": 0.235,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-11-01",
+      "avg_value": 0.145,
+      "min_value": 0.13,
+      "max_value": 0.159,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2018-12-01",
+      "avg_value": 0.139,
+      "min_value": 0.129,
+      "max_value": 0.15,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2018-12-01",
+      "avg_value": 0.208,
+      "min_value": 0.191,
+      "max_value": 0.236,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2018-12-01",
+      "avg_value": 0.176,
+      "min_value": 0.164,
+      "max_value": 0.185,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-01-01",
+      "avg_value": 0.184,
+      "min_value": 0.16,
+      "max_value": 0.221,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-01-01",
+      "avg_value": 0.258,
+      "min_value": 0.227,
+      "max_value": 0.297,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-01-01",
+      "avg_value": 0.224,
+      "min_value": 0.194,
+      "max_value": 0.279,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-02-01",
+      "avg_value": 0.213,
+      "min_value": 0.202,
+      "max_value": 0.224,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-02-01",
+      "avg_value": 0.143,
+      "min_value": 0.137,
+      "max_value": 0.152,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-02-01",
+      "avg_value": 0.184,
+      "min_value": 0.176,
+      "max_value": 0.192,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-03-01",
+      "avg_value": 0.188,
+      "min_value": 0.184,
+      "max_value": 0.196,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-03-01",
+      "avg_value": 0.216,
+      "min_value": 0.211,
+      "max_value": 0.222,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-03-01",
+      "avg_value": 0.149,
+      "min_value": 0.144,
+      "max_value": 0.157,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-04-01",
+      "avg_value": 0.264,
+      "min_value": 0.23,
+      "max_value": 0.286,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-04-01",
+      "avg_value": 0.206,
+      "min_value": 0.192,
+      "max_value": 0.226,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-04-01",
+      "avg_value": 0.243,
+      "min_value": 0.207,
+      "max_value": 0.272,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-05-01",
+      "avg_value": 0.172,
+      "min_value": 0.16,
+      "max_value": 0.183,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-05-01",
+      "avg_value": 0.218,
+      "min_value": 0.201,
+      "max_value": 0.231,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-05-01",
+      "avg_value": 0.202,
+      "min_value": 0.183,
+      "max_value": 0.216,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-06-01",
+      "avg_value": 0.21,
+      "min_value": 0.199,
+      "max_value": 0.221,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-06-01",
+      "avg_value": 0.193,
+      "min_value": 0.186,
+      "max_value": 0.201,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-06-01",
+      "avg_value": 0.162,
+      "min_value": 0.154,
+      "max_value": 0.171,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-07-01",
+      "avg_value": 0.194,
+      "min_value": 0.178,
+      "max_value": 0.217,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-07-01",
+      "avg_value": 0.149,
+      "min_value": 0.143,
+      "max_value": 0.164,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-07-01",
+      "avg_value": 0.181,
+      "min_value": 0.169,
+      "max_value": 0.194,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-08-01",
+      "avg_value": 0.173,
+      "min_value": 0.153,
+      "max_value": 0.199,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-08-01",
+      "avg_value": 0.164,
+      "min_value": 0.148,
+      "max_value": 0.185,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-08-01",
+      "avg_value": 0.134,
+      "min_value": 0.13,
+      "max_value": 0.146,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-09-01",
+      "avg_value": 0.126,
+      "min_value": 0.119,
+      "max_value": 0.131,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-09-01",
+      "avg_value": 0.155,
+      "min_value": 0.147,
+      "max_value": 0.167,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-09-01",
+      "avg_value": 0.165,
+      "min_value": 0.157,
+      "max_value": 0.175,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-10-01",
+      "avg_value": 0.146,
+      "min_value": 0.14,
+      "max_value": 0.15,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-10-01",
+      "avg_value": 0.116,
+      "min_value": 0.11,
+      "max_value": 0.118,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-10-01",
+      "avg_value": 0.169,
+      "min_value": 0.159,
+      "max_value": 0.178,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-11-01",
+      "avg_value": 0.105,
+      "min_value": 0.093,
+      "max_value": 0.11,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-11-01",
+      "avg_value": 0.162,
+      "min_value": 0.146,
+      "max_value": 0.178,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-11-01",
+      "avg_value": 0.145,
+      "min_value": 0.127,
+      "max_value": 0.156,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2019-12-01",
+      "avg_value": 0.134,
+      "min_value": 0.099,
+      "max_value": 0.157,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2019-12-01",
+      "avg_value": 0.197,
+      "min_value": 0.17,
+      "max_value": 0.228,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2019-12-01",
+      "avg_value": 0.181,
+      "min_value": 0.146,
+      "max_value": 0.207,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-01-01",
+      "avg_value": 0.366,
+      "min_value": 0.293,
+      "max_value": 0.514,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-01-01",
+      "avg_value": 0.354,
+      "min_value": 0.252,
+      "max_value": 0.582,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-01-01",
+      "avg_value": 0.317,
+      "min_value": 0.233,
+      "max_value": 0.503,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-02-01",
+      "avg_value": 0.203,
+      "min_value": 0.185,
+      "max_value": 0.216,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-02-01",
+      "avg_value": 0.212,
+      "min_value": 0.198,
+      "max_value": 0.232,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-02-01",
+      "avg_value": 0.257,
+      "min_value": 0.241,
+      "max_value": 0.267,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-03-01",
+      "avg_value": 0.415,
+      "min_value": 0.384,
+      "max_value": 0.466,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-03-01",
+      "avg_value": 0.384,
+      "min_value": 0.37,
+      "max_value": 0.417,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-03-01",
+      "avg_value": 0.388,
+      "min_value": 0.326,
+      "max_value": 0.424,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-04-01",
+      "avg_value": 0.464,
+      "min_value": 0.4,
+      "max_value": 0.507,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-04-01",
+      "avg_value": 0.439,
+      "min_value": 0.389,
+      "max_value": 0.475,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-04-01",
+      "avg_value": 0.409,
+      "min_value": 0.344,
+      "max_value": 0.453,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-05-01",
+      "avg_value": 0.29,
+      "min_value": 0.25,
+      "max_value": 0.346,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-05-01",
+      "avg_value": 0.272,
+      "min_value": 0.215,
+      "max_value": 0.355,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-05-01",
+      "avg_value": 0.273,
+      "min_value": 0.218,
+      "max_value": 0.36,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-06-01",
+      "avg_value": 0.197,
+      "min_value": 0.192,
+      "max_value": 0.204,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-06-01",
+      "avg_value": 0.187,
+      "min_value": 0.175,
+      "max_value": 0.202,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-06-01",
+      "avg_value": 0.223,
+      "min_value": 0.213,
+      "max_value": 0.232,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-07-01",
+      "avg_value": 0.181,
+      "min_value": 0.167,
+      "max_value": 0.192,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-07-01",
+      "avg_value": 0.198,
+      "min_value": 0.186,
+      "max_value": 0.211,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-07-01",
+      "avg_value": 0.164,
+      "min_value": 0.152,
+      "max_value": 0.174,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-08-01",
+      "avg_value": 0.165,
+      "min_value": 0.157,
+      "max_value": 0.168,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-08-01",
+      "avg_value": 0.176,
+      "min_value": 0.169,
+      "max_value": 0.181,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-08-01",
+      "avg_value": 0.148,
+      "min_value": 0.142,
+      "max_value": 0.15,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-09-01",
+      "avg_value": 0.141,
+      "min_value": 0.134,
+      "max_value": 0.145,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-09-01",
+      "avg_value": 0.173,
+      "min_value": 0.151,
+      "max_value": 0.188,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-09-01",
+      "avg_value": 0.185,
+      "min_value": 0.16,
+      "max_value": 0.203,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-10-01",
+      "avg_value": 0.129,
+      "min_value": 0.124,
+      "max_value": 0.137,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-10-01",
+      "avg_value": 0.17,
+      "min_value": 0.163,
+      "max_value": 0.177,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-10-01",
+      "avg_value": 0.188,
+      "min_value": 0.18,
+      "max_value": 0.197,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-11-01",
+      "avg_value": 0.123,
+      "min_value": 0.104,
+      "max_value": 0.137,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-11-01",
+      "avg_value": 0.174,
+      "min_value": 0.123,
+      "max_value": 0.195,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-11-01",
+      "avg_value": 0.159,
+      "min_value": 0.099,
+      "max_value": 0.183,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2020-12-01",
+      "avg_value": 0.124,
+      "min_value": 0.12,
+      "max_value": 0.129,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2020-12-01",
+      "avg_value": 0.167,
+      "min_value": 0.163,
+      "max_value": 0.172,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2020-12-01",
+      "avg_value": 0.18,
+      "min_value": 0.135,
+      "max_value": 0.19,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-01-01",
+      "avg_value": 0.442,
+      "min_value": 0.234,
+      "max_value": 0.649,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-01-01",
+      "avg_value": 0.609,
+      "min_value": 0.609,
+      "max_value": 0.609,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-01-01",
+      "avg_value": 0.528,
+      "min_value": 0.502,
+      "max_value": 0.554,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-02-01",
+      "avg_value": 0.585,
+      "min_value": 0.558,
+      "max_value": 0.632,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-02-01",
+      "avg_value": 0.567,
+      "min_value": 0.533,
+      "max_value": 0.62,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-02-01",
+      "avg_value": 0.637,
+      "min_value": 0.585,
+      "max_value": 0.683,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-03-01",
+      "avg_value": 0.546,
+      "min_value": 0.505,
+      "max_value": 0.622,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-03-01",
+      "avg_value": 0.545,
+      "min_value": 0.511,
+      "max_value": 0.61,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-03-01",
+      "avg_value": 0.548,
+      "min_value": 0.52,
+      "max_value": 0.573,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-04-01",
+      "avg_value": 0.403,
+      "min_value": 0.341,
+      "max_value": 0.489,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-04-01",
+      "avg_value": 0.373,
+      "min_value": 0.313,
+      "max_value": 0.469,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-04-01",
+      "avg_value": 0.434,
+      "min_value": 0.388,
+      "max_value": 0.52,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-05-01",
+      "avg_value": 0.327,
+      "min_value": 0.289,
+      "max_value": 0.363,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-05-01",
+      "avg_value": 0.251,
+      "min_value": 0.222,
+      "max_value": 0.287,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-05-01",
+      "avg_value": 0.278,
+      "min_value": 0.245,
+      "max_value": 0.319,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-06-01",
+      "avg_value": 0.19,
+      "min_value": 0.18,
+      "max_value": 0.207,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-06-01",
+      "avg_value": 0.202,
+      "min_value": 0.189,
+      "max_value": 0.236,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-06-01",
+      "avg_value": 0.247,
+      "min_value": 0.226,
+      "max_value": 0.285,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-07-01",
+      "avg_value": 0.164,
+      "min_value": 0.151,
+      "max_value": 0.182,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-07-01",
+      "avg_value": 0.21,
+      "min_value": 0.187,
+      "max_value": 0.234,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-07-01",
+      "avg_value": 0.168,
+      "min_value": 0.159,
+      "max_value": 0.178,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-08-01",
+      "avg_value": 0.144,
+      "min_value": 0.138,
+      "max_value": 0.151,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-08-01",
+      "avg_value": 0.152,
+      "min_value": 0.143,
+      "max_value": 0.157,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-08-01",
+      "avg_value": 0.173,
+      "min_value": 0.148,
+      "max_value": 0.185,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-09-01",
+      "avg_value": 0.17,
+      "min_value": 0.167,
+      "max_value": 0.173,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-09-01",
+      "avg_value": 0.133,
+      "min_value": 0.128,
+      "max_value": 0.141,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-09-01",
+      "avg_value": 0.149,
+      "min_value": 0.142,
+      "max_value": 0.152,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-10-01",
+      "avg_value": 0.186,
+      "min_value": 0.173,
+      "max_value": 0.208,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-10-01",
+      "avg_value": 0.153,
+      "min_value": 0.14,
+      "max_value": 0.169,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-10-01",
+      "avg_value": 0.132,
+      "min_value": 0.121,
+      "max_value": 0.15,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-11-01",
+      "avg_value": 0.155,
+      "min_value": 0.139,
+      "max_value": 0.171,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-11-01",
+      "avg_value": 0.188,
+      "min_value": 0.137,
+      "max_value": 0.21,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-11-01",
+      "avg_value": 0.136,
+      "min_value": 0.128,
+      "max_value": 0.149,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2021-12-01",
+      "avg_value": 0.201,
+      "min_value": 0.191,
+      "max_value": 0.211,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2021-12-01",
+      "avg_value": 0.147,
+      "min_value": 0.141,
+      "max_value": 0.157,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2021-12-01",
+      "avg_value": 0.162,
+      "min_value": 0.157,
+      "max_value": 0.17,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-01-01",
+      "avg_value": 0.217,
+      "min_value": 0.185,
+      "max_value": 0.294,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-01-01",
+      "avg_value": 0.183,
+      "min_value": 0.154,
+      "max_value": 0.254,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-01-01",
+      "avg_value": 0.163,
+      "min_value": 0.14,
+      "max_value": 0.221,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-02-01",
+      "avg_value": 0.475,
+      "min_value": 0.36,
+      "max_value": 0.565,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-02-01",
+      "avg_value": 0.531,
+      "min_value": 0.442,
+      "max_value": 0.613,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-02-01",
+      "avg_value": 0.565,
+      "min_value": 0.471,
+      "max_value": 0.654,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-03-01",
+      "avg_value": 0.533,
+      "min_value": 0.473,
+      "max_value": 0.613,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-03-01",
+      "avg_value": 0.522,
+      "min_value": 0.49,
+      "max_value": 0.558,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-03-01",
+      "avg_value": 0.483,
+      "min_value": 0.426,
+      "max_value": 0.55,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-04-01",
+      "avg_value": 0.428,
+      "min_value": 0.329,
+      "max_value": 0.519,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-04-01",
+      "avg_value": 0.401,
+      "min_value": 0.308,
+      "max_value": 0.485,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-04-01",
+      "avg_value": 0.364,
+      "min_value": 0.251,
+      "max_value": 0.485,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-05-01",
+      "avg_value": 0.218,
+      "min_value": 0.199,
+      "max_value": 0.247,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-05-01",
+      "avg_value": 0.256,
+      "min_value": 0.224,
+      "max_value": 0.297,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-05-01",
+      "avg_value": 0.254,
+      "min_value": 0.207,
+      "max_value": 0.311,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-06-01",
+      "avg_value": 0.183,
+      "min_value": 0.157,
+      "max_value": 0.193,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-06-01",
+      "avg_value": 0.209,
+      "min_value": 0.193,
+      "max_value": 0.218,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-06-01",
+      "avg_value": 0.183,
+      "min_value": 0.169,
+      "max_value": 0.192,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-07-01",
+      "avg_value": 0.164,
+      "min_value": 0.156,
+      "max_value": 0.175,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-07-01",
+      "avg_value": 0.154,
+      "min_value": 0.146,
+      "max_value": 0.167,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-07-01",
+      "avg_value": 0.187,
+      "min_value": 0.177,
+      "max_value": 0.202,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-08-01",
+      "avg_value": 0.147,
+      "min_value": 0.14,
+      "max_value": 0.161,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-08-01",
+      "avg_value": 0.143,
+      "min_value": 0.132,
+      "max_value": 0.157,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-08-01",
+      "avg_value": 0.17,
+      "min_value": 0.163,
+      "max_value": 0.184,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-09-01",
+      "avg_value": 0.154,
+      "min_value": 0.146,
+      "max_value": 0.164,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-09-01",
+      "avg_value": 0.171,
+      "min_value": 0.163,
+      "max_value": 0.183,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-09-01",
+      "avg_value": 0.131,
+      "min_value": 0.124,
+      "max_value": 0.139,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-10-01",
+      "avg_value": 0.139,
+      "min_value": 0.13,
+      "max_value": 0.153,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-10-01",
+      "avg_value": 0.167,
+      "min_value": 0.157,
+      "max_value": 0.176,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-10-01",
+      "avg_value": 0.192,
+      "min_value": 0.173,
+      "max_value": 0.216,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-11-01",
+      "avg_value": 0.144,
+      "min_value": 0.136,
+      "max_value": 0.162,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-11-01",
+      "avg_value": 0.17,
+      "min_value": 0.158,
+      "max_value": 0.187,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-11-01",
+      "avg_value": 0.194,
+      "min_value": 0.182,
+      "max_value": 0.208,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2022-12-01",
+      "avg_value": 0.23,
+      "min_value": 0.201,
+      "max_value": 0.252,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2022-12-01",
+      "avg_value": 0.175,
+      "min_value": 0.151,
+      "max_value": 0.208,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2022-12-01",
+      "avg_value": 0.205,
+      "min_value": 0.176,
+      "max_value": 0.239,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-01-01",
+      "avg_value": 0.281,
+      "min_value": 0.211,
+      "max_value": 0.397,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-01-01",
+      "avg_value": 0.285,
+      "min_value": 0.195,
+      "max_value": 0.441,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-01-01",
+      "avg_value": 0.243,
+      "min_value": 0.174,
+      "max_value": 0.33,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-02-01",
+      "avg_value": 0.504,
+      "min_value": 0.429,
+      "max_value": 0.571,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-02-01",
+      "avg_value": 0.412,
+      "min_value": 0.399,
+      "max_value": 0.439,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-02-01",
+      "avg_value": 0.476,
+      "min_value": 0.434,
+      "max_value": 0.512,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-03-01",
+      "avg_value": 0.286,
+      "min_value": 0.254,
+      "max_value": 0.329,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-03-01",
+      "avg_value": 0.258,
+      "min_value": 0.216,
+      "max_value": 0.31,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-03-01",
+      "avg_value": 0.306,
+      "min_value": 0.278,
+      "max_value": 0.329,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-04-01",
+      "avg_value": 0.199,
+      "min_value": 0.187,
+      "max_value": 0.217,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-04-01",
+      "avg_value": 0.258,
+      "min_value": 0.235,
+      "max_value": 0.275,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-04-01",
+      "avg_value": 0.227,
+      "min_value": 0.205,
+      "max_value": 0.246,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-05-01",
+      "avg_value": 0.282,
+      "min_value": 0.209,
+      "max_value": 0.339,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-05-01",
+      "avg_value": 0.254,
+      "min_value": 0.222,
+      "max_value": 0.282,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-05-01",
+      "avg_value": 0.268,
+      "min_value": 0.241,
+      "max_value": 0.307,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-06-01",
+      "avg_value": 0.197,
+      "min_value": 0.182,
+      "max_value": 0.215,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-06-01",
+      "avg_value": 0.228,
+      "min_value": 0.208,
+      "max_value": 0.251,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-06-01",
+      "avg_value": 0.197,
+      "min_value": 0.177,
+      "max_value": 0.225,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-07-01",
+      "avg_value": 0.173,
+      "min_value": 0.16,
+      "max_value": 0.179,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-07-01",
+      "avg_value": 0.173,
+      "min_value": 0.053,
+      "max_value": 0.209,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-07-01",
+      "avg_value": 0.161,
+      "min_value": 0.15,
+      "max_value": 0.171,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-08-01",
+      "avg_value": 0.137,
+      "min_value": 0.129,
+      "max_value": 0.146,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-08-01",
+      "avg_value": 0.168,
+      "min_value": 0.161,
+      "max_value": 0.173,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-08-01",
+      "avg_value": 0.155,
+      "min_value": 0.146,
+      "max_value": 0.163,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-09-01",
+      "avg_value": 0.166,
+      "min_value": 0.161,
+      "max_value": 0.174,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-09-01",
+      "avg_value": 0.14,
+      "min_value": 0.13,
+      "max_value": 0.149,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-09-01",
+      "avg_value": 0.18,
+      "min_value": 0.168,
+      "max_value": 0.193,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-10-01",
+      "avg_value": 0.168,
+      "min_value": 0.162,
+      "max_value": 0.175,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-10-01",
+      "avg_value": 0.134,
+      "min_value": 0.121,
+      "max_value": 0.143,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-10-01",
+      "avg_value": 0.189,
+      "min_value": 0.184,
+      "max_value": 0.198,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-11-01",
+      "avg_value": 0.16,
+      "min_value": 0.13,
+      "max_value": 0.181,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-11-01",
+      "avg_value": 0.124,
+      "min_value": 0.109,
+      "max_value": 0.138,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-11-01",
+      "avg_value": 0.179,
+      "min_value": 0.147,
+      "max_value": 0.207,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2023-12-01",
+      "avg_value": 0.23,
+      "min_value": 0.189,
+      "max_value": 0.246,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2023-12-01",
+      "avg_value": 0.168,
+      "min_value": 0.137,
+      "max_value": 0.187,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2023-12-01",
+      "avg_value": 0.195,
+      "min_value": 0.154,
+      "max_value": 0.217,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-01-01",
+      "avg_value": 0.222,
+      "min_value": 0.198,
+      "max_value": 0.237,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-01-01",
+      "avg_value": 0.181,
+      "min_value": 0.165,
+      "max_value": 0.189,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-01-01",
+      "avg_value": 0.156,
+      "min_value": 0.14,
+      "max_value": 0.167,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-02-01",
+      "avg_value": 0.207,
+      "min_value": 0.173,
+      "max_value": 0.256,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-02-01",
+      "avg_value": 0.263,
+      "min_value": 0.204,
+      "max_value": 0.346,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-02-01",
+      "avg_value": 0.301,
+      "min_value": 0.258,
+      "max_value": 0.34,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-03-01",
+      "avg_value": 0.269,
+      "min_value": 0.219,
+      "max_value": 0.333,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-03-01",
+      "avg_value": 0.28,
+      "min_value": 0.249,
+      "max_value": 0.318,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-03-01",
+      "avg_value": 0.216,
+      "min_value": 0.187,
+      "max_value": 0.247,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-04-01",
+      "avg_value": 0.364,
+      "min_value": 0.315,
+      "max_value": 0.394,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-04-01",
+      "avg_value": 0.379,
+      "min_value": 0.349,
+      "max_value": 0.402,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-04-01",
+      "avg_value": 0.385,
+      "min_value": 0.344,
+      "max_value": 0.417,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-05-01",
+      "avg_value": 0.281,
+      "min_value": 0.253,
+      "max_value": 0.315,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-05-01",
+      "avg_value": 0.253,
+      "min_value": 0.211,
+      "max_value": 0.317,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-05-01",
+      "avg_value": 0.296,
+      "min_value": 0.248,
+      "max_value": 0.353,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-06-01",
+      "avg_value": 0.194,
+      "min_value": 0.171,
+      "max_value": 0.228,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-06-01",
+      "avg_value": 0.219,
+      "min_value": 0.202,
+      "max_value": 0.251,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-06-01",
+      "avg_value": 0.193,
+      "min_value": 0.175,
+      "max_value": 0.216,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-07-01",
+      "avg_value": 0.172,
+      "min_value": 0.164,
+      "max_value": 0.181,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-07-01",
+      "avg_value": 0.202,
+      "min_value": 0.19,
+      "max_value": 0.21,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-07-01",
+      "avg_value": 0.18,
+      "min_value": 0.174,
+      "max_value": 0.188,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-08-01",
+      "avg_value": 0.171,
+      "min_value": 0.161,
+      "max_value": 0.188,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-08-01",
+      "avg_value": 0.161,
+      "min_value": 0.151,
+      "max_value": 0.187,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-08-01",
+      "avg_value": 0.183,
+      "min_value": 0.173,
+      "max_value": 0.204,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-09-01",
+      "avg_value": 0.175,
+      "min_value": 0.172,
+      "max_value": 0.182,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-09-01",
+      "avg_value": 0.134,
+      "min_value": 0.085,
+      "max_value": 0.148,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-09-01",
+      "avg_value": 0.154,
+      "min_value": 0.076,
+      "max_value": 0.177,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-10-01",
+      "avg_value": 0.201,
+      "min_value": 0.191,
+      "max_value": 0.213,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-10-01",
+      "avg_value": 0.172,
+      "min_value": 0.165,
+      "max_value": 0.177,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-10-01",
+      "avg_value": 0.146,
+      "min_value": 0.14,
+      "max_value": 0.153,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-11-01",
+      "avg_value": 0.174,
+      "min_value": 0.083,
+      "max_value": 0.212,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-11-01",
+      "avg_value": 0.165,
+      "min_value": 0.152,
+      "max_value": 0.179,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-11-01",
+      "avg_value": 0.135,
+      "min_value": 0.124,
+      "max_value": 0.149,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2024-12-01",
+      "avg_value": 0.137,
+      "min_value": 0.122,
+      "max_value": 0.161,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2024-12-01",
+      "avg_value": 0.169,
+      "min_value": 0.153,
+      "max_value": 0.192,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2024-12-01",
+      "avg_value": 0.178,
+      "min_value": 0.158,
+      "max_value": 0.204,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-01-01",
+      "avg_value": 0.243,
+      "min_value": 0.194,
+      "max_value": 0.271,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-01-01",
+      "avg_value": 0.289,
+      "min_value": 0.215,
+      "max_value": 0.345,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-01-01",
+      "avg_value": 0.274,
+      "min_value": 0.214,
+      "max_value": 0.318,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-02-01",
+      "avg_value": 0.582,
+      "min_value": 0.506,
+      "max_value": 0.628,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-02-01",
+      "avg_value": 0.46,
+      "min_value": 0.318,
+      "max_value": 0.561,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-02-01",
+      "avg_value": 0.467,
+      "min_value": 0.345,
+      "max_value": 0.538,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-03-01",
+      "avg_value": 0.439,
+      "min_value": 0.37,
+      "max_value": 0.525,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-03-01",
+      "avg_value": 0.602,
+      "min_value": 0.585,
+      "max_value": 0.627,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-03-01",
+      "avg_value": 0.565,
+      "min_value": 0.532,
+      "max_value": 0.597,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-04-01",
+      "avg_value": 0.517,
+      "min_value": 0.469,
+      "max_value": 0.596,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-04-01",
+      "avg_value": 0.36,
+      "min_value": 0.299,
+      "max_value": 0.478,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-04-01",
+      "avg_value": 0.428,
+      "min_value": 0.405,
+      "max_value": 0.458,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-05-01",
+      "avg_value": 0.258,
+      "min_value": 0.23,
+      "max_value": 0.281,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-05-01",
+      "avg_value": 0.318,
+      "min_value": 0.256,
+      "max_value": 0.374,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-05-01",
+      "avg_value": 0.383,
+      "min_value": 0.299,
+      "max_value": 0.463,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-06-01",
+      "avg_value": 0.221,
+      "min_value": 0.197,
+      "max_value": 0.25,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-06-01",
+      "avg_value": 0.236,
+      "min_value": 0.217,
+      "max_value": 0.286,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-06-01",
+      "avg_value": 0.213,
+      "min_value": 0.198,
+      "max_value": 0.241,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-07-01",
+      "avg_value": 0.203,
+      "min_value": 0.184,
+      "max_value": 0.216,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-07-01",
+      "avg_value": 0.201,
+      "min_value": 0.186,
+      "max_value": 0.218,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-07-01",
+      "avg_value": 0.19,
+      "min_value": 0.177,
+      "max_value": 0.203,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-08-01",
+      "avg_value": 0.195,
+      "min_value": 0.183,
+      "max_value": 0.202,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-08-01",
+      "avg_value": 0.176,
+      "min_value": 0.165,
+      "max_value": 0.183,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-08-01",
+      "avg_value": 0.189,
+      "min_value": 0.178,
+      "max_value": 0.197,
+      "has_satellite": true
+    },
+    {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
       "metric_type": "ndvi",
       "month": "2025-09-01",
-      "avg_value": 0.231,
-      "min_value": 0.214,
-      "max_value": 0.248
+      "avg_value": 0.185,
+      "min_value": 0.175,
+      "max_value": 0.202,
+      "has_satellite": true
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
@@ -483,31 +3000,8 @@
       "month": "2025-09-01",
       "avg_value": 19.177,
       "min_value": 18,
-      "max_value": 20.5
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "soil_moisture",
-      "month": "2025-09-01",
-      "avg_value": 10.331,
-      "min_value": 9.2,
-      "max_value": 11.3
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "soil_moisture",
-      "month": "2025-09-01",
-      "avg_value": 5.646,
-      "min_value": 4.6,
-      "max_value": 6.9
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
-      "month": "2025-09-01",
-      "avg_value": 0.156,
-      "min_value": 0.142,
-      "max_value": 0.169
+      "max_value": 20.5,
+      "has_satellite": false
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -515,7 +3009,26 @@
       "month": "2025-09-01",
       "avg_value": 0.153,
       "min_value": 0.141,
-      "max_value": 0.165
+      "max_value": 0.165,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2025-09-01",
+      "avg_value": 10.331,
+      "min_value": 9.2,
+      "max_value": 11.3,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-09-01",
+      "avg_value": 0.188,
+      "min_value": 0.173,
+      "max_value": 0.206,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -523,71 +3036,26 @@
       "month": "2025-09-01",
       "avg_value": 9.485,
       "min_value": 8.5,
-      "max_value": 10.5
+      "max_value": 10.5,
+      "has_satellite": false
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2025-09-01",
+      "avg_value": 5.646,
+      "min_value": 4.6,
+      "max_value": 6.9,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "ndvi",
       "month": "2025-09-01",
-      "avg_value": 0.098,
-      "min_value": 0.098,
-      "max_value": 0.098
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "ndvi",
-      "month": "2025-10-01",
-      "avg_value": 0.125,
-      "min_value": 0.101,
-      "max_value": 0.137
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
-      "month": "2025-10-01",
-      "avg_value": 0.198,
-      "min_value": 0.173,
-      "max_value": 0.222
-    },
-    {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
-      "metric_type": "soil_moisture",
-      "month": "2025-10-01",
-      "avg_value": 11.494,
-      "min_value": 9.1,
-      "max_value": 14
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "soil_moisture",
-      "month": "2025-10-01",
-      "avg_value": 20.935,
-      "min_value": 18.7,
-      "max_value": 23.4
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2025-10-01",
-      "avg_value": 0.276,
-      "min_value": 0.241,
-      "max_value": 0.326
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "soil_moisture",
-      "month": "2025-10-01",
-      "avg_value": 12.335,
-      "min_value": 9.9,
-      "max_value": 14.7
-    },
-    {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
-      "metric_type": "ndvi",
-      "month": "2025-10-01",
-      "avg_value": 0.193,
-      "min_value": 0.162,
-      "max_value": 0.221
+      "avg_value": 0.203,
+      "min_value": 0.191,
+      "max_value": 0.215,
+      "has_satellite": true
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
@@ -595,55 +3063,71 @@
       "month": "2025-10-01",
       "avg_value": 7.448,
       "min_value": 5.5,
-      "max_value": 9
+      "max_value": 9,
+      "has_satellite": false
     },
     {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "ndvi",
-      "month": "2025-11-01",
-      "avg_value": 0.159,
-      "min_value": 0.128,
-      "max_value": 0.198
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
       "metric_type": "soil_moisture",
-      "month": "2025-11-01",
-      "avg_value": 9.617,
-      "min_value": 7.4,
-      "max_value": 11.4
+      "month": "2025-10-01",
+      "avg_value": 20.935,
+      "min_value": 18.7,
+      "max_value": 23.4,
+      "has_satellite": false
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
       "metric_type": "ndvi",
-      "month": "2025-11-01",
-      "avg_value": 0.365,
-      "min_value": 0.305,
-      "max_value": 0.433
+      "month": "2025-10-01",
+      "avg_value": 0.195,
+      "min_value": 0.184,
+      "max_value": 0.207,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-10-01",
+      "avg_value": 0.202,
+      "min_value": 0.195,
+      "max_value": 0.216,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
       "metric_type": "ndvi",
-      "month": "2025-11-01",
-      "avg_value": 0.272,
-      "min_value": 0.213,
-      "max_value": 0.303
+      "month": "2025-10-01",
+      "avg_value": 0.193,
+      "min_value": 0.162,
+      "max_value": 0.221,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-10-01",
+      "avg_value": 0.194,
+      "min_value": 0.182,
+      "max_value": 0.213,
+      "has_satellite": true
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "soil_moisture",
-      "month": "2025-11-01",
-      "avg_value": 15.453,
-      "min_value": 13.2,
-      "max_value": 17.8
+      "month": "2025-10-01",
+      "avg_value": 12.335,
+      "min_value": 9.9,
+      "max_value": 14.7,
+      "has_satellite": false
     },
     {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
       "metric_type": "soil_moisture",
-      "month": "2025-11-01",
-      "avg_value": 24.157,
-      "min_value": 21.9,
-      "max_value": 26.4
+      "month": "2025-10-01",
+      "avg_value": 11.494,
+      "min_value": 9.1,
+      "max_value": 14,
+      "has_satellite": false
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -651,71 +3135,71 @@
       "month": "2025-11-01",
       "avg_value": 15.02,
       "min_value": 12.7,
-      "max_value": 17.7
+      "max_value": 17.7,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2025-11-01",
+      "avg_value": 24.157,
+      "min_value": 21.9,
+      "max_value": 26.4,
+      "has_satellite": false
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "ndvi",
       "month": "2025-11-01",
-      "avg_value": 0.275,
-      "min_value": 0.246,
-      "max_value": 0.329
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
-      "month": "2025-12-01",
-      "avg_value": 0.366,
-      "min_value": 0.309,
-      "max_value": 0.408
+      "avg_value": 0.218,
+      "min_value": 0.185,
+      "max_value": 0.255,
+      "has_satellite": true
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "soil_moisture",
-      "month": "2025-12-01",
-      "avg_value": 18.5,
-      "min_value": 16.4,
-      "max_value": 21
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "ndvi",
-      "month": "2025-12-01",
-      "avg_value": 0.193,
-      "min_value": 0.168,
-      "max_value": 0.215
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2025-12-01",
-      "avg_value": 0.511,
-      "min_value": 0.449,
-      "max_value": 0.596
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "soil_moisture",
-      "month": "2025-12-01",
-      "avg_value": 11.7,
-      "min_value": 10.2,
-      "max_value": 13.1
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "soil_moisture",
-      "month": "2025-12-01",
-      "avg_value": 26.91,
-      "min_value": 24.6,
-      "max_value": 28.6
+      "month": "2025-11-01",
+      "avg_value": 15.453,
+      "min_value": 13.2,
+      "max_value": 17.8,
+      "has_satellite": false
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
       "metric_type": "ndvi",
-      "month": "2025-12-01",
-      "avg_value": 0.378,
-      "min_value": 0.315,
-      "max_value": 0.422
+      "month": "2025-11-01",
+      "avg_value": 0.272,
+      "min_value": 0.213,
+      "max_value": 0.303,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-11-01",
+      "avg_value": 0.212,
+      "min_value": 0.188,
+      "max_value": 0.244,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2025-11-01",
+      "avg_value": 9.617,
+      "min_value": 7.4,
+      "max_value": 11.4,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-11-01",
+      "avg_value": 0.219,
+      "min_value": 0.194,
+      "max_value": 0.254,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -723,15 +3207,71 @@
       "month": "2025-12-01",
       "avg_value": 18.587,
       "min_value": 16.1,
-      "max_value": 20.9
+      "max_value": 20.9,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.309,
+      "min_value": 0.234,
+      "max_value": 0.37,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2025-12-01",
+      "avg_value": 11.7,
+      "min_value": 10.2,
+      "max_value": 13.1,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.378,
+      "min_value": 0.315,
+      "max_value": 0.422,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2025-12-01",
+      "avg_value": 26.91,
+      "min_value": 24.6,
+      "max_value": 28.6,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.283,
+      "min_value": 0.224,
+      "max_value": 0.34,
+      "has_satellite": true
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "soil_moisture",
-      "month": "2026-01-01",
-      "avg_value": 21.1,
-      "min_value": 20,
-      "max_value": 22.7
+      "month": "2025-12-01",
+      "avg_value": 18.5,
+      "min_value": 16.4,
+      "max_value": 21,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2025-12-01",
+      "avg_value": 0.356,
+      "min_value": 0.243,
+      "max_value": 0.435,
+      "has_satellite": true
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
@@ -739,31 +3279,17 @@
       "month": "2026-01-01",
       "avg_value": 13.455,
       "min_value": 12.1,
-      "max_value": 14.8
+      "max_value": 14.8,
+      "has_satellite": false
     },
     {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "ndvi",
       "month": "2026-01-01",
-      "avg_value": 0.245,
-      "min_value": 0.231,
-      "max_value": 0.26
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2026-01-01",
-      "avg_value": 0.633,
-      "min_value": 0.58,
-      "max_value": 0.696
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "soil_moisture",
-      "month": "2026-01-01",
-      "avg_value": 29.055,
-      "min_value": 27.3,
-      "max_value": 30.8
+      "avg_value": 0.347,
+      "min_value": 0.23,
+      "max_value": 0.495,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -771,7 +3297,44 @@
       "month": "2026-01-01",
       "avg_value": 20.861,
       "min_value": 19,
-      "max_value": 22.6
+      "max_value": 22.6,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
+      "month": "2026-01-01",
+      "avg_value": 21.1,
+      "min_value": 20,
+      "max_value": 22.7,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-01-01",
+      "avg_value": 29.055,
+      "min_value": 27.3,
+      "max_value": 30.8,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-01-01",
+      "avg_value": 0.335,
+      "min_value": 0.23,
+      "max_value": 0.409,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-01-01",
+      "avg_value": 0.349,
+      "min_value": 0.233,
+      "max_value": 0.455,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -779,23 +3342,8 @@
       "month": "2026-01-01",
       "avg_value": 0.46,
       "min_value": 0.423,
-      "max_value": 0.501
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
-      "month": "2026-01-01",
-      "avg_value": 0.449,
-      "min_value": 0.407,
-      "max_value": 0.478
-    },
-    {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
-      "metric_type": "ndvi",
-      "month": "2026-02-01",
-      "avg_value": 0.522,
-      "min_value": 0.501,
-      "max_value": 0.534
+      "max_value": 0.501,
+      "has_satellite": false
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
@@ -803,7 +3351,17 @@
       "month": "2026-02-01",
       "avg_value": 21.896,
       "min_value": 20.8,
-      "max_value": 23.1
+      "max_value": 23.1,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-02-01",
+      "avg_value": 0.419,
+      "min_value": 0.254,
+      "max_value": 0.535,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -811,31 +3369,8 @@
       "month": "2026-02-01",
       "avg_value": 22.071,
       "min_value": 20.8,
-      "max_value": 23.2
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
-      "month": "2026-02-01",
-      "avg_value": 0.506,
-      "min_value": 0.479,
-      "max_value": 0.535
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "soil_moisture",
-      "month": "2026-02-01",
-      "avg_value": 29.979,
-      "min_value": 28.9,
-      "max_value": 31
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2026-02-01",
-      "avg_value": 0.703,
-      "min_value": 0.677,
-      "max_value": 0.717
+      "max_value": 23.2,
+      "has_satellite": false
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
@@ -843,55 +3378,53 @@
       "month": "2026-02-01",
       "avg_value": 13.95,
       "min_value": 12.8,
-      "max_value": 15
+      "max_value": 15,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-02-01",
+      "avg_value": 29.979,
+      "min_value": 28.9,
+      "max_value": 31,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-02-01",
+      "avg_value": 0.388,
+      "min_value": 0.227,
+      "max_value": 0.498,
+      "has_satellite": true
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "metric_type": "ndvi",
       "month": "2026-02-01",
-      "avg_value": 0.271,
-      "min_value": 0.258,
-      "max_value": 0.279
-    },
-    {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
-      "metric_type": "soil_moisture",
-      "month": "2026-03-01",
-      "avg_value": 21.223,
-      "min_value": 19.3,
-      "max_value": 22.6
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "soil_moisture",
-      "month": "2026-03-01",
-      "avg_value": 13.594,
-      "min_value": 11.9,
-      "max_value": 14.6
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2026-03-01",
-      "avg_value": 0.719,
-      "min_value": 0.694,
-      "max_value": 0.735
+      "avg_value": 0.412,
+      "min_value": 0.336,
+      "max_value": 0.472,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
       "metric_type": "ndvi",
-      "month": "2026-03-01",
-      "avg_value": 0.523,
-      "min_value": 0.498,
-      "max_value": 0.545
+      "month": "2026-02-01",
+      "avg_value": 0.522,
+      "min_value": 0.501,
+      "max_value": 0.534,
+      "has_satellite": false
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "ndvi",
       "month": "2026-03-01",
-      "avg_value": 0.512,
-      "min_value": 0.502,
-      "max_value": 0.521
+      "avg_value": 0.366,
+      "min_value": 0.267,
+      "max_value": 0.514,
+      "has_satellite": true
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
@@ -899,7 +3432,53 @@
       "month": "2026-03-01",
       "avg_value": 20.9,
       "min_value": 19.3,
-      "max_value": 22.8
+      "max_value": 22.8,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-03-01",
+      "avg_value": 21.223,
+      "min_value": 19.3,
+      "max_value": 22.6,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
+      "month": "2026-03-01",
+      "avg_value": 0.523,
+      "min_value": 0.498,
+      "max_value": 0.545,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-03-01",
+      "avg_value": 0.351,
+      "min_value": 0.269,
+      "max_value": 0.479,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-03-01",
+      "avg_value": 13.594,
+      "min_value": 11.9,
+      "max_value": 14.6,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-03-01",
+      "avg_value": 0.343,
+      "min_value": 0.272,
+      "max_value": 0.442,
+      "has_satellite": true
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
@@ -907,15 +3486,8 @@
       "month": "2026-03-01",
       "avg_value": 29.097,
       "min_value": 28,
-      "max_value": 30.6
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "ndvi",
-      "month": "2026-03-01",
-      "avg_value": 0.272,
-      "min_value": 0.255,
-      "max_value": 0.292
+      "max_value": 30.6,
+      "has_satellite": false
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
@@ -923,23 +3495,17 @@
       "month": "2026-04-01",
       "avg_value": 11.853,
       "min_value": 10.5,
-      "max_value": 13.1
-    },
-    {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
-      "metric_type": "soil_moisture",
-      "month": "2026-04-01",
-      "avg_value": 18.363,
-      "min_value": 16,
-      "max_value": 20.6
+      "max_value": 13.1,
+      "has_satellite": false
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "soil_moisture",
+      "metric_type": "ndvi",
       "month": "2026-04-01",
-      "avg_value": 18.777,
-      "min_value": 16.8,
-      "max_value": 20.8
+      "avg_value": 0.376,
+      "min_value": 0.275,
+      "max_value": 0.458,
+      "has_satellite": true
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
@@ -947,23 +3513,26 @@
       "month": "2026-04-01",
       "avg_value": 27.2,
       "min_value": 25.5,
-      "max_value": 29.4
+      "max_value": 29.4,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-04-01",
+      "avg_value": 18.363,
+      "min_value": 16,
+      "max_value": 20.6,
+      "has_satellite": false
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
+      "metric_type": "soil_moisture",
       "month": "2026-04-01",
-      "avg_value": 0.478,
-      "min_value": 0.429,
-      "max_value": 0.503
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "ndvi",
-      "month": "2026-04-01",
-      "avg_value": 0.263,
-      "min_value": 0.243,
-      "max_value": 0.281
+      "avg_value": 18.777,
+      "min_value": 16.8,
+      "max_value": 20.8,
+      "has_satellite": false
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -971,55 +3540,26 @@
       "month": "2026-04-01",
       "avg_value": 0.487,
       "min_value": 0.439,
-      "max_value": 0.522
+      "max_value": 0.522,
+      "has_satellite": false
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
       "metric_type": "ndvi",
       "month": "2026-04-01",
-      "avg_value": 0.668,
-      "min_value": 0.615,
-      "max_value": 0.709
+      "avg_value": 0.359,
+      "min_value": 0.329,
+      "max_value": 0.384,
+      "has_satellite": true
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "soil_moisture",
-      "month": "2026-05-01",
-      "avg_value": 9.558,
-      "min_value": 7.5,
-      "max_value": 11.3
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "ndvi",
-      "month": "2026-05-01",
-      "avg_value": 0.399,
-      "min_value": 0.353,
-      "max_value": 0.448
-    },
-    {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
-      "metric_type": "soil_moisture",
-      "month": "2026-05-01",
-      "avg_value": 14.861,
-      "min_value": 12.2,
-      "max_value": 16.8
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2026-05-01",
-      "avg_value": 0.565,
-      "min_value": 0.522,
-      "max_value": 0.61
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "soil_moisture",
-      "month": "2026-05-01",
-      "avg_value": 24.239,
-      "min_value": 21.8,
-      "max_value": 26.4
+      "month": "2026-04-01",
+      "avg_value": 0.453,
+      "min_value": 0.376,
+      "max_value": 0.484,
+      "has_satellite": true
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
@@ -1027,7 +3567,17 @@
       "month": "2026-05-01",
       "avg_value": 15.645,
       "min_value": 13.8,
-      "max_value": 17.9
+      "max_value": 17.9,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
+      "month": "2026-05-01",
+      "avg_value": 24.239,
+      "min_value": 21.8,
+      "max_value": 26.4,
+      "has_satellite": false
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -1035,55 +3585,71 @@
       "month": "2026-05-01",
       "avg_value": 0.41,
       "min_value": 0.374,
-      "max_value": 0.458
+      "max_value": 0.458,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-05-01",
+      "avg_value": 14.861,
+      "min_value": 12.2,
+      "max_value": 16.8,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-05-01",
+      "avg_value": 0.277,
+      "min_value": 0.262,
+      "max_value": 0.305,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-05-01",
+      "avg_value": 0.302,
+      "min_value": 0.265,
+      "max_value": 0.387,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-05-01",
+      "avg_value": 9.558,
+      "min_value": 7.5,
+      "max_value": 11.3,
+      "has_satellite": false
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "metric_type": "ndvi",
       "month": "2026-05-01",
-      "avg_value": 0.229,
-      "min_value": 0.203,
-      "max_value": 0.263
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2026-06-01",
-      "avg_value": 0.437,
-      "min_value": 0.375,
-      "max_value": 0.505
+      "avg_value": 0.378,
+      "min_value": 0.324,
+      "max_value": 0.499,
+      "has_satellite": true
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "metric_type": "ndvi",
       "month": "2026-06-01",
-      "avg_value": 0.185,
-      "min_value": 0.144,
-      "max_value": 0.214
+      "avg_value": 0.29,
+      "min_value": 0.25,
+      "max_value": 0.333,
+      "has_satellite": true
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "soil_moisture",
+      "metric_type": "ndvi",
       "month": "2026-06-01",
-      "avg_value": 20.833,
-      "min_value": 19,
-      "max_value": 22.2
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "soil_moisture",
-      "month": "2026-06-01",
-      "avg_value": 7.68,
-      "min_value": 5.9,
-      "max_value": 9.4
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "soil_moisture",
-      "month": "2026-06-01",
-      "avg_value": 12.42,
-      "min_value": 10.5,
-      "max_value": 14.1
+      "avg_value": 0.245,
+      "min_value": 0.218,
+      "max_value": 0.276,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -1091,7 +3657,26 @@
       "month": "2026-06-01",
       "avg_value": 11.747,
       "min_value": 10.1,
-      "max_value": 14.2
+      "max_value": 14.2,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-06-01",
+      "avg_value": 7.68,
+      "min_value": 5.9,
+      "max_value": 9.4,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-06-01",
+      "avg_value": 0.266,
+      "min_value": 0.235,
+      "max_value": 0.3,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -1099,31 +3684,26 @@
       "month": "2026-06-01",
       "avg_value": 0.307,
       "min_value": 0.263,
-      "max_value": 0.361
+      "max_value": 0.361,
+      "has_satellite": false
     },
     {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "soil_moisture",
       "month": "2026-06-01",
-      "avg_value": 0.306,
-      "min_value": 0.267,
-      "max_value": 0.358
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "ndvi",
-      "month": "2026-07-01",
-      "avg_value": 0.132,
-      "min_value": 0.114,
-      "max_value": 0.155
+      "avg_value": 20.833,
+      "min_value": 19,
+      "max_value": 22.2,
+      "has_satellite": false
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
-      "month": "2026-07-01",
-      "avg_value": 0.231,
-      "min_value": 0.188,
-      "max_value": 0.262
+      "metric_type": "soil_moisture",
+      "month": "2026-06-01",
+      "avg_value": 12.42,
+      "min_value": 10.5,
+      "max_value": 14.1,
+      "has_satellite": false
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
@@ -1131,23 +3711,17 @@
       "month": "2026-07-01",
       "avg_value": 5.635,
       "min_value": 4.1,
-      "max_value": 6.9
+      "max_value": 6.9,
+      "has_satellite": false
     },
     {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "ndvi",
       "month": "2026-07-01",
-      "avg_value": 0.224,
-      "min_value": 0.171,
-      "max_value": 0.28
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2026-07-01",
-      "avg_value": 0.305,
-      "min_value": 0.268,
-      "max_value": 0.339
+      "avg_value": 0.211,
+      "min_value": 0.188,
+      "max_value": 0.233,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -1155,15 +3729,17 @@
       "month": "2026-07-01",
       "avg_value": 9.174,
       "min_value": 7.9,
-      "max_value": 10.7
+      "max_value": 10.7,
+      "has_satellite": false
     },
     {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "soil_moisture",
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "ndvi",
       "month": "2026-07-01",
-      "avg_value": 10.029,
-      "min_value": 8.5,
-      "max_value": 11.6
+      "avg_value": 0.224,
+      "min_value": 0.171,
+      "max_value": 0.28,
+      "has_satellite": false
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
@@ -1171,39 +3747,35 @@
       "month": "2026-07-01",
       "avg_value": 19.006,
       "min_value": 17.5,
-      "max_value": 20.6
+      "max_value": 20.6,
+      "has_satellite": false
     },
     {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "soil_moisture",
-      "month": "2026-08-01",
-      "avg_value": 5.077,
-      "min_value": 3.8,
-      "max_value": 6.3
-    },
-    {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "soil_moisture",
-      "month": "2026-08-01",
-      "avg_value": 9.206,
-      "min_value": 7.8,
-      "max_value": 10.3
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-07-01",
+      "avg_value": 0.192,
+      "min_value": 0.177,
+      "max_value": 0.209,
+      "has_satellite": true
     },
     {
       "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "metric_type": "ndvi",
-      "month": "2026-08-01",
-      "avg_value": 0.106,
-      "min_value": 0.09,
-      "max_value": 0.125
+      "month": "2026-07-01",
+      "avg_value": 0.212,
+      "min_value": 0.178,
+      "max_value": 0.239,
+      "has_satellite": true
     },
     {
       "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "ndvi",
-      "month": "2026-08-01",
-      "avg_value": 0.172,
-      "min_value": 0.146,
-      "max_value": 0.193
+      "metric_type": "soil_moisture",
+      "month": "2026-07-01",
+      "avg_value": 10.029,
+      "min_value": 8.5,
+      "max_value": 11.6,
+      "has_satellite": false
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -1211,7 +3783,26 @@
       "month": "2026-08-01",
       "avg_value": 8.3,
       "min_value": 6.8,
-      "max_value": 9.2
+      "max_value": 9.2,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
+      "month": "2026-08-01",
+      "avg_value": 0.167,
+      "min_value": 0.163,
+      "max_value": 0.175,
+      "has_satellite": true
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-08-01",
+      "avg_value": 0.172,
+      "min_value": 0.167,
+      "max_value": 0.183,
+      "has_satellite": true
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
@@ -1219,7 +3810,26 @@
       "month": "2026-08-01",
       "avg_value": 18.126,
       "min_value": 16.9,
-      "max_value": 19.3
+      "max_value": 19.3,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-08-01",
+      "avg_value": 5.077,
+      "min_value": 3.8,
+      "max_value": 6.3,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "ndvi",
+      "month": "2026-08-01",
+      "avg_value": 0.16,
+      "min_value": 0.148,
+      "max_value": 0.17,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
@@ -1227,79 +3837,89 @@
       "month": "2026-08-01",
       "avg_value": 0.154,
       "min_value": 0.13,
-      "max_value": 0.175
+      "max_value": 0.175,
+      "has_satellite": false
     },
     {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "soil_moisture",
       "month": "2026-08-01",
-      "avg_value": 0.238,
-      "min_value": 0.223,
-      "max_value": 0.267
+      "avg_value": 9.206,
+      "min_value": 7.8,
+      "max_value": 10.3,
+      "has_satellite": false
     },
     {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
+      "metric_type": "soil_moisture",
+      "month": "2026-09-01",
+      "avg_value": 8.402,
+      "min_value": 5.675,
+      "max_value": 10.452,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "metric_type": "soil_moisture",
+      "month": "2026-09-01",
+      "avg_value": 4.456,
+      "min_value": 3.063,
+      "max_value": 6.1,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
       "metric_type": "ndvi",
       "month": "2026-09-01",
-      "avg_value": 0.177,
-      "min_value": 0.154,
-      "max_value": 0.189
+      "avg_value": 0.154,
+      "min_value": 0.147,
+      "max_value": 0.159,
+      "has_satellite": true
     },
     {
       "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
       "metric_type": "soil_moisture",
       "month": "2026-09-01",
-      "avg_value": 18.233,
-      "min_value": 16.157,
-      "max_value": 20.056
+      "avg_value": 14.758,
+      "min_value": 12.317,
+      "max_value": 19.7,
+      "has_satellite": false
     },
     {
-      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
-      "metric_type": "soil_moisture",
+      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
+      "metric_type": "ndvi",
       "month": "2026-09-01",
-      "avg_value": 9.527,
-      "min_value": 8.236,
-      "max_value": 10.884
-    },
-    {
-      "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
-      "metric_type": "soil_moisture",
-      "month": "2026-09-01",
-      "avg_value": 9.735,
-      "min_value": 7.3,
-      "max_value": 11.299
+      "avg_value": 0.178,
+      "min_value": 0.173,
+      "max_value": 0.185,
+      "has_satellite": true
     },
     {
       "zone_id": "f190b5db-f1c6-46af-8598-d04db58062d3",
       "metric_type": "ndvi",
       "month": "2026-09-01",
-      "avg_value": 0.156,
+      "avg_value": 0.15,
       "min_value": 0.13,
-      "max_value": 0.165
+      "max_value": 0.175,
+      "has_satellite": false
     },
     {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
-      "metric_type": "ndvi",
-      "month": "2026-09-01",
-      "avg_value": 0.101,
-      "min_value": 0.089,
-      "max_value": 0.122
-    },
-    {
-      "zone_id": "b6b68c24-cccf-4eac-9d17-cb7539a7545f",
-      "metric_type": "ndvi",
-      "month": "2026-09-01",
-      "avg_value": 0.245,
-      "min_value": 0.215,
-      "max_value": 0.256
-    },
-    {
-      "zone_id": "8dbb29ac-202d-441c-8ef9-e4c9295c3b84",
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
       "metric_type": "soil_moisture",
       "month": "2026-09-01",
-      "avg_value": 5.871,
-      "min_value": 4.3,
-      "max_value": 6.828
+      "avg_value": 23.906,
+      "min_value": 8.6,
+      "max_value": 27.8,
+      "has_satellite": false
+    },
+    {
+      "zone_id": "961e4b66-7f62-4580-ba89-bf406d25f80f",
+      "metric_type": "ndvi",
+      "month": "2026-09-01",
+      "avg_value": 0.178,
+      "min_value": 0.173,
+      "max_value": 0.186,
+      "has_satellite": true
     }
   ],
   "monthlyRainfall": [
@@ -1371,24 +3991,38 @@
   ],
   "vendors": [
     {
+      "vendor_label": "DynaCrop · Sentinel-2",
+      "metric_type": "ndvi",
+      "last_reading_at": "2026-09-22",
+      "reading_count": 1714,
+      "origin": "satellite",
+      "source_platform": "Sentinel-2"
+    },
+    {
       "vendor_label": "Vendor 1",
       "metric_type": "soil_moisture",
-      "last_reading_at": "2026-09-17T21:30:00.04101+00:00",
-      "reading_count": 1704
+      "last_reading_at": "2026-09-23",
+      "reading_count": 2180,
+      "origin": "simulated",
+      "source_platform": null
     },
     {
       "vendor_label": "Vendor 2",
       "metric_type": "ndvi",
-      "last_reading_at": "2026-09-17T21:30:00.04101+00:00",
-      "reading_count": 536
+      "last_reading_at": "2026-09-23",
+      "reading_count": 253,
+      "origin": "simulated",
+      "source_platform": null
     },
     {
       "vendor_label": "Vendor 3",
       "metric_type": "rainfall",
-      "last_reading_at": "2026-09-17T06:00:00+00:00",
-      "reading_count": 365
+      "last_reading_at": "2026-09-17",
+      "reading_count": 365,
+      "origin": "simulated",
+      "source_platform": null
     }
   ],
   "source": "fallback",
-  "generatedAt": "2026-09-17T21:31:01.823Z"
+  "generatedAt": "2026-09-23T04:37:54.075Z"
 }

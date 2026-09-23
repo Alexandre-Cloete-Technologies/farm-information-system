@@ -1,10 +1,11 @@
 import { FarmMap } from "@/components/FarmMap";
 import { GenerateReportButton } from "@/components/GenerateReportButton";
 import { RainfallChart } from "@/components/charts/RainfallChart";
-import { Panel, Stat } from "@/components/ui/Panel";
+import { OriginBadge, Panel, Stat } from "@/components/ui/Panel";
 import { REFERENCE, assessFarm, formatNad } from "@/lib/analytics/risk";
+import { describeProvenance, formatObservedOn } from "@/lib/data/provenance";
 import type { FarmSnapshot } from "@/lib/data/types";
-import { LAND_USE_LABELS } from "@/lib/data/types";
+import { LAND_USE_LABELS, METRIC_LABELS } from "@/lib/data/types";
 
 const BAND_TONE = {
   Low: "ok",
@@ -15,6 +16,7 @@ const BAND_TONE = {
 
 export function BankView({ snapshot }: { snapshot: FarmSnapshot }) {
   const a = assessFarm(snapshot);
+  const provenance = describeProvenance(snapshot);
 
   return (
     <div className="space-y-4">
@@ -45,6 +47,32 @@ export function BankView({ snapshot }: { snapshot: FarmSnapshot }) {
             <p className="mt-1.5 text-xs text-muted">
               {formatNad(a.valuePerHaNad)} per hectare × {snapshot.farm.area_ha} ha
             </p>
+          </div>
+
+          <div className="mt-3 rounded-md bg-surface-muted p-3">
+            <p className="text-[11px] font-medium uppercase tracking-wide text-muted">
+              What this score is built from
+            </p>
+            <ul className="mt-2 space-y-1.5">
+              {provenance.byMetric.map((m) => (
+                <li key={m.metric} className="flex items-start justify-between gap-3 text-xs">
+                  <span>
+                    {METRIC_LABELS[m.metric]}
+                    {m.origin === "satellite" ? (
+                      <span className="block text-muted">
+                        {m.instrument} · observed {formatObservedOn(m.observedOn)}
+                        {m.simulatedZones.length > 0
+                          ? ` · ${m.simulatedZones.join(", ")} still modelled`
+                          : ""}
+                      </span>
+                    ) : (
+                      <span className="block text-muted">Modelled — no satellite product</span>
+                    )}
+                  </span>
+                  <OriginBadge measured={m.origin === "satellite"} />
+                </li>
+              ))}
+            </ul>
           </div>
 
           <p className="mt-3 text-xs text-muted">

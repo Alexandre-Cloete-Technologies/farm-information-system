@@ -1,7 +1,12 @@
 import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
 import { REFERENCE, assessFarm, formatNad } from "@/lib/analytics/risk";
+import {
+  COPERNICUS_ATTRIBUTION,
+  describeProvenance,
+  formatObservedOn,
+} from "@/lib/data/provenance";
 import type { FarmSnapshot } from "@/lib/data/types";
-import { LAND_USE_LABELS } from "@/lib/data/types";
+import { LAND_USE_LABELS, METRIC_LABELS } from "@/lib/data/types";
 
 const INK = {
   heading: "#5d3a12",
@@ -62,6 +67,7 @@ const styles = StyleSheet.create({
  */
 export function valuationReportDocument(snapshot: FarmSnapshot) {
   const a = assessFarm(snapshot);
+  const provenance = describeProvenance(snapshot);
   const generated = new Date();
   const maxRain = Math.max(...snapshot.monthlyRainfall.map((m) => m.total_mm), 1);
 
@@ -78,8 +84,9 @@ export function valuationReportDocument(snapshot: FarmSnapshot) {
         </Text>
         <Text style={styles.subtitle}>
           Prepared {generated.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
-          {" · "}
-          {snapshot.source === "live" ? "Live satellite feed" : "Cached satellite snapshot"}
+          {provenance.latestObservedOn
+            ? ` · Satellite data to ${formatObservedOn(provenance.latestObservedOn)}`
+            : " · Modelled data"}
         </Text>
 
         <View style={styles.rule} />
@@ -182,21 +189,61 @@ export function valuationReportDocument(snapshot: FarmSnapshot) {
         </View>
 
         <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Data provenance</Text>
+          <View style={styles.headRow}>
+            <Text style={[styles.th, { flex: 2 }]}>Measurement</Text>
+            <Text style={[styles.th, { flex: 1 }]}>Source</Text>
+            <Text style={[styles.th, { flex: 2 }]}>Instrument</Text>
+            <Text style={[styles.th, { flex: 2 }]}>Latest observation</Text>
+          </View>
+          {provenance.byMetric.map((m) => (
+            <View key={m.metric} style={styles.row}>
+              <Text style={[styles.cell, { flex: 2 }]}>{METRIC_LABELS[m.metric]}</Text>
+              <Text style={[styles.cell, { flex: 1 }]}>
+                {m.origin === "satellite" ? "Satellite" : "Modelled"}
+              </Text>
+              <Text style={[styles.cellMuted, { flex: 2 }]}>{m.instrument ?? "—"}</Text>
+              <Text style={[styles.cellMuted, { flex: 2 }]}>
+                {m.origin === "satellite" ? formatObservedOn(m.observedOn) : "n/a"}
+              </Text>
+            </View>
+          ))}
+          {provenance.byMetric.some((m) => m.simulatedZones.length > 0) ? (
+            <Text style={[styles.note, { marginTop: 6 }]}>
+              Zones still modelled:{" "}
+              {provenance.byMetric
+                .filter((m) => m.origin === "satellite" && m.simulatedZones.length > 0)
+                .map((m) => `${METRIC_LABELS[m.metric]} — ${m.simulatedZones.join(", ")}`)
+                .join("; ")}
+              . These are outside the current satellite subscription and are generated for
+              demonstration.
+            </Text>
+          ) : null}
+        </View>
+
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>Basis &amp; limitations</Text>
           <Text style={styles.note}>
-            Figures are derived from satellite observations aggregated across{" "}
-            {snapshot.vendors.map((v) => v.vendor_label).join(", ")} and normalised into a single
-            time series. The indicative value applies a base peri-urban land rate of{" "}
+            The indicative value applies a base peri-urban land rate of{" "}
             {formatNad(REFERENCE.BASE_VALUE_PER_HA_NAD)} per hectare, adjusted by ±15% on the
             productivity score. Grazing capacity assumes a {REFERENCE.HA_PER_LSU_NORMAL} ha per LSU
-            stocking rate in a normal season, scaled by observed conditions.
+            stocking rate in a normal season, scaled by observed conditions. The vegetation
+            reference of {REFERENCE.PEAK_NDVI_REFERENCE} is the mean seasonal peak measured on this
+            parcel across eight seasons, not a regional assumption.
+          </Text>
+          <Text style={[styles.note, { marginTop: 6 }]}>
+            Satellite imagery is not acquired daily and optical observations can be lost to cloud.
+            Figures show the most recent usable observation, dated above, rather than a live
+            reading.
           </Text>
           <Text style={[styles.note, { marginTop: 6 }]}>
             This is a screening indication for portfolio monitoring, not a registered valuation. It
             does not account for improvements, water rights, servitudes, access or title, and does
-            not replace a physical inspection. Prototype data: readings are simulated for
-            demonstration.
+            not replace a physical inspection.
           </Text>
+          {provenance.anySatellite ? (
+            <Text style={[styles.note, { marginTop: 6 }]}>{COPERNICUS_ATTRIBUTION}</Text>
+          ) : null}
         </View>
 
         <View style={styles.footer} fixed>

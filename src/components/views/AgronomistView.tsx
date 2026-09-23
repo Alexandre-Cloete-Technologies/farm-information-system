@@ -1,6 +1,7 @@
 import { FarmMap } from "@/components/FarmMap";
 import { ZoneTrendChart } from "@/components/charts/ZoneTrendChart";
-import { EmptyState, Panel, SeverityDot } from "@/components/ui/Panel";
+import { EmptyState, OriginBadge, Panel, SeverityDot } from "@/components/ui/Panel";
+import { isMeasured } from "@/lib/data/provenance";
 import { buildPrescriptions, zoneConditions } from "@/lib/analytics/agronomy";
 import type { FarmSnapshot } from "@/lib/data/types";
 import { LAND_USE_LABELS } from "@/lib/data/types";
@@ -42,9 +43,10 @@ export function AgronomistView({ snapshot }: { snapshot: FarmSnapshot }) {
                 {conditions.map((condition) => (
                   <tr key={condition.zone.id} className="border-b border-border last:border-0">
                     <td className="py-2">
-                      <span className="flex items-center gap-1.5">
+                      <span className="flex flex-wrap items-center gap-1.5">
                         <SeverityDot severity={condition.severity} />
                         {condition.zone.name}
+                        <OriginBadge measured={isMeasured(snapshot, condition.zone.id, "ndvi")} />
                       </span>
                     </td>
                     <td className="py-2 text-muted">{LAND_USE_LABELS[condition.zone.land_use]}</td>

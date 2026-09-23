@@ -4,10 +4,24 @@ A web-only prototype of the FIS: satellite-derived soil moisture, vegetation
 index and rainfall for one Namibian farm, presented through three role-based
 dashboards. Built to demo to investors, scoped to Section 6 of the URD.
 
-Satellite readings are **simulated**. There is no vendor integration yet — the
-`mock_readings` table stands in for the ingestion pipeline, with each metric
-labelled by a placeholder vendor so the "we aggregate three vendors" story stays
-visible on screen.
+**Vegetation data is real. Soil moisture and rainfall are still simulated.**
+
+NDVI for three of the four management zones comes from DynaCrop (World from
+Space) — Sentinel-2, 1,714 observations from January 2018 to the present. Soil
+moisture and rainfall remain modelled, and every figure carries its origin
+through the dashboard and the PDF so a lender can tell measurement from model.
+
+Why only part of it is real:
+
+| Metric | Status | Reason |
+|---|---|---|
+| Vegetation index (NDVI) | **Sentinel-2** | Working on the trial plan |
+| Soil moisture | Simulated | Needs Sentinel-1 (SMI), a commercial-tier source |
+| Rainfall | Simulated | DynaCrop has no precipitation product on any tier |
+
+The trial plan also caps registration at three fields, so **North Grazing Camp
+is still modelled** while the other three zones are measured. That split is
+deliberate — it is what the real-vs-simulated marking exists to show.
 
 ## Stack
 
@@ -43,6 +57,8 @@ login page (they are listed there, one click each).
 | `npm run lint` | ESLint |
 | `npm run seed:snapshot` | Regenerate the offline fallback snapshot from Supabase |
 | `node scripts/build-parcel-geometry.mjs` | Rebuild the farm boundary and zones from OpenStreetMap |
+| `DC_KEY=… node scripts/fetch-dynacrop-ndvi.mjs out.json` | Pull satellite NDVI history from DynaCrop |
+| `node scripts/build-ndvi-migration.mjs in.json out.sql` | Turn that into a versioned migration |
 
 `predev` and `prebuild` copy MapLibre's web worker into `public/maplibre/` — see
 `scripts/copy-maplibre-worker.mjs` for why that is necessary.
@@ -158,6 +174,22 @@ the session directly, `/login` bounces anyone already signed in, and
 `<SessionKeeper>` handles the token refresh middleware used to do. If you add a
 `middleware.ts` or `proxy.ts` back, the deploy will break — put the check in the
 route.
+
+**Satellite ingestion is a batch job, not a live feed.** `fetch-dynacrop-ndvi.mjs`
+pulls the history and `build-ndvi-migration.mjs` turns it into SQL, which is
+applied as an ordinary migration. The API key is passed through the environment
+and never reaches a file, the repo or the browser bundle. **The scheduled
+Supabase Edge Function is not built yet** — refreshing the data today means
+re-running those two scripts and applying the migration. See the handover note
+for why that trade was made.
+
+Two invariants protect the measured data:
+
+- The `pg_cron` random-walk skips any zone/metric that has satellite readings,
+  so a model can never overwrite or extend a measurement.
+- `zone_latest_metrics` ranks a satellite reading above a simulated one for the
+  same zone and metric. Without it a model — which writes with `now()` — would
+  outrank a real observation purely for being newer, since imagery always lags.
 
 **The numbers are defensible.** `src/lib/analytics/risk.ts` holds the risk and
 valuation formula, with every assumption a valuer would argue about named as a

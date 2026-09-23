@@ -16,6 +16,18 @@ and network you will actually present from, the day before.
 - [ ] Open the deployed URL on the presenting machine and sign in once, so any
       cold start is already paid for.
 
+## Satellite data
+
+- [ ] Header strip reads **Vegetation index (NDVI) · Sentinel-2 · NDVI ·
+      observed &lt;date&gt; · 1 zone simulated**, with soil moisture and rainfall
+      marked simulated.
+- [ ] Be ready to say which figures are measured and which are modelled. The
+      dashboard and PDF both state it; don't let anyone leave thinking soil
+      moisture or rainfall is live.
+- [ ] If asked why the riverbed zone is no longer "degraded": it was
+      reclassified from eight seasons of measured NDVI, which showed it
+      performing as well as the cropland.
+
 ## Each role
 
 Sign in, load the dashboard, and check the screen is complete before moving on.

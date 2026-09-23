@@ -62,6 +62,32 @@ describe("assessFarm — edge cases", () => {
     expect(a.productivityScore).toBeLessThanOrEqual(100);
   });
 
+  it("scores the current season, not the best month on record", () => {
+    // Eight seasons of satellite history are now loaded. An unbounded peak
+    // would compare this season against the best month ever observed.
+    const snapshot = makeSnapshot();
+    const withHistory = {
+      ...snapshot,
+      monthlyByZone: [
+        // An exceptional season years ago, outside the rolling window.
+        ...snapshot.zones.map((z) => ({
+          zone_id: z.id,
+          metric_type: "ndvi" as const,
+          month: "2019-02-01",
+          avg_value: 0.7,
+          min_value: 0.6,
+          max_value: 0.95,
+          has_satellite: true,
+        })),
+        ...snapshot.monthlyByZone,
+      ],
+    };
+
+    // The old behaviour would pick 0.95 and saturate the score.
+    expect(assessFarm(withHistory).peakNdvi).toBe(REFERENCE.PEAK_NDVI_REFERENCE);
+    expect(assessFarm(withHistory).productivityScore).toBeLessThan(100);
+  });
+
   it("survives a farm with no vegetation readings at all", () => {
     const a = assessFarm(makeSnapshot({ monthlyByZone: [] }));
     expect(a.peakNdvi).toBe(0);
