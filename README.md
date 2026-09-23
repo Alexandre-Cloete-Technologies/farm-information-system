@@ -16,7 +16,7 @@ Why only part of it is real:
 | Metric | Status | Reason |
 |---|---|---|
 | Vegetation index (NDVI) | **Sentinel-2** | Working on the trial plan |
-| Soil moisture | Simulated | Needs Sentinel-1 (SMI), a commercial-tier source |
+| Soil moisture | Simulated | Needs Sentinel-1 (SMI), not enabled on the trial plan — which plan enables it is unconfirmed |
 | Rainfall | Simulated | DynaCrop has no precipitation product on any tier |
 
 The trial plan also caps registration at three fields, so **North Grazing Camp
@@ -124,7 +124,7 @@ sum to it exactly.
 `node scripts/build-parcel-geometry.mjs [osmWayId]` regenerates the whole thing
 from Overpass and prints a migration — use it to swap in a different parcel.
 Its output is byte-identical to
-`supabase/migrations/20260917214500_real_parcel_geometry.sql`.
+`supabase/migrations/20260917213045_real_parcel_geometry.sql`.
 
 Twelve months of readings are seeded with Khomas Region seasonality — wet
 November to April, dry May to October — and rainfall normalised to the regional

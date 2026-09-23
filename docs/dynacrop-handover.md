@@ -1,6 +1,8 @@
 # DynaCrop integration — handover
 
-Written 23 Sept 2026, overnight, ahead of the AgriBank demo.
+Written 23 Sept 2026, overnight, ahead of the AgriBank demo. This is the
+operator's note. For the client-facing summary, limits, findings and effort, see
+[PHASE2_HANDOFF.md](PHASE2_HANDOFF.md).
 
 ## What is real now
 
@@ -11,7 +13,7 @@ cadence. Soil moisture and rainfall are still simulated.
 | Metric | Status | Why |
 |---|---|---|
 | Vegetation index (NDVI) | **Sentinel-2, real** | Works on the trial plan |
-| Soil moisture | Simulated | Needs Sentinel-1 (SMI) — commercial tier only |
+| Soil moisture | Simulated | Needs Sentinel-1 (SMI) — not enabled on the trial; which plan enables it is unconfirmed |
 | Rainfall | Simulated | DynaCrop has no precipitation product on any tier |
 
 **North Grazing Camp is still simulated.** The trial allows three registered
@@ -83,6 +85,15 @@ exposed.
   being newer.
 - Re-running the backfill is safe: a unique index on
   `(zone, metric, platform, product, observed_on)` makes it idempotent.
+
+## Migration history quirk
+
+`20260923042523_real_ndvi_backfill` was applied to the live project in two
+parts: the recorded migration contains only the `delete` of simulated NDVI, and
+the three `insert` blocks were run as separate SQL straight after. The file in
+the repo contains both, so a fresh environment built from the repo matches the
+live data. It only matters if you compare the SQL stored in Supabase's migration
+history against the file.
 
 ## The riverbed reclassification
 
